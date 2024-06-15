@@ -1,27 +1,31 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
+import { Outlet, createBrowserRouter } from "react-router-dom"; 
+import Projetcs from "./components/Projetcs";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      {/* <main className="content"> */}
+        <Outlet />
+      {/* </main> */}
     </div>
   );
 }
 
-export default App;
+const router = createBrowserRouter([
+  {
+    'path': "/",
+    'element': <App />,
+    'children': [
+      {
+        'path': '/projects',
+        'element': <Projetcs />
+      }
+    ]
+  }
+]);
+
+export default router;
