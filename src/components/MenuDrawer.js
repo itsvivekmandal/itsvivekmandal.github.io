@@ -31,7 +31,7 @@ const MenuDrawer = ({handleClick, path}) => {
         anchor="right" 
         open={drawer} 
         onClose={toggleDrawer}
-        sx={{ '& .MuiDrawer-paper': { width: '40%' } }}  
+        sx={{ '& .MuiDrawer-paper': { width: '50%' } }}  
       >
         <List>
           {/* <ListItem key='logo'>
