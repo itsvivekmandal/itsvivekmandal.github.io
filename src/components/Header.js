@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
-import { AppBar, Toolbar, Grid, Tabs, Tab } from "@mui/material";
+import { AppBar, Toolbar, Grid, Tabs, Tab, styled } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import MenuDrawer from "./MenuDrawer";
 import logo from "../assets/image/logo.png";
+
+const CustomTab = styled(Tab)(({ theme }) => ({
+  fontSize: '16px',
+  fontWeight: 'bold'
+}));
 
 const Header = () => {
   const location = useLocation();
@@ -38,15 +43,15 @@ const Header = () => {
               textColor="secondary"
               indicatorColor="secondary"
             >
-              <Tab label="Home" component={Link} to="/" value="/" />
-              <Tab
+              <CustomTab label="Home" component={Link} to="/" value="/" />
+              <CustomTab
                 label="Projects"
                 component={Link}
                 to="/projects"
                 value="/projects"
               />
-              <Tab label="About" component={Link} to="/about" value="/about" />
-              <Tab
+              <CustomTab label="About" component={Link} to="/about" value="/about" />
+              <CustomTab
                 label="Contact"
                 component={Link}
                 to="/contact"

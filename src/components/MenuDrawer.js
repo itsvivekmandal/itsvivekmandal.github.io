@@ -1,9 +1,14 @@
 import {useState} from "react";
 import {Link } from 'react-router-dom';
-import { Drawer, List, ListItem, ListItemText, Tabs, Tab, Divider } from "@mui/material";
+import { Drawer, List, ListItem, ListItemText, Tabs, Tab, Divider, styled } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from "../assets/image/logo.png";
+
+const CustomTab = styled(Tab)(({ theme }) => ({
+  fontSize: '16px',
+  fontWeight: 'bold'
+}));
 
 const MenuDrawer = ({handleClick, path}) => {
   const [drawer, setDrawer] = useState(false);
@@ -38,10 +43,10 @@ const MenuDrawer = ({handleClick, path}) => {
             value={path}
             onChange={handleClick}
           >
-            <Tab label="Home" component={Link} to="/" value="/" onClick={toggleDrawer} />
-            <Tab label="Projects" component={Link} to="/projects" value="/projects" onClick={toggleDrawer} />
-            <Tab label="About" component={Link} to="/about" value="/about" onClick={toggleDrawer} />
-            <Tab label="Contact" component={Link} to="/contact" value="/contact" onClick={toggleDrawer} />
+            <CustomTab label="Home" component={Link} to="/" value="/" onClick={toggleDrawer} />
+            <CustomTab label="Projects" component={Link} to="/projects" value="/projects" onClick={toggleDrawer} />
+            <CustomTab label="About" component={Link} to="/about" value="/about" onClick={toggleDrawer} />
+            <CustomTab label="Contact" component={Link} to="/contact" value="/contact" onClick={toggleDrawer} />
           </Tabs>
         </List>
       </Drawer>
