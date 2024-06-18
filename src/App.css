@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+/* logo style */
+img {
+  max-width: 60px;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
