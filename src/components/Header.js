@@ -28,7 +28,7 @@ const Header = () => {
         <Grid container spacing={2} alignItems="center">
           {/* Logo for md screen */}
           <Grid item xs={10} md={2} sx={{ display: "flex" }}>
-            <img src={logo} alt="logo" />
+            <img className="logo" src={logo} alt="logo" />
           </Grid>
           {/* Menu for md screen */}
           <Grid

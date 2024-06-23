@@ -1,13 +1,14 @@
 import {useState} from "react";
 import {Link } from 'react-router-dom';
-import { Drawer, List, ListItem, ListItemText, Tabs, Tab, Divider, styled } from "@mui/material";
+import { Drawer, List, ListItem, ListItemText, Tabs, Tab, Divider, styled, Grid } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from "../assets/image/logo.png";
 
 const CustomTab = styled(Tab)(({ theme }) => ({
   fontSize: '16px',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  alignItems: 'flex-start'
 }));
 
 const MenuDrawer = ({handleClick, path}) => {
@@ -33,22 +34,26 @@ const MenuDrawer = ({handleClick, path}) => {
         onClose={toggleDrawer}
         sx={{ '& .MuiDrawer-paper': { width: '50%' } }}  
       >
-        <List>
-          {/* <ListItem key='logo'>
-            <img width="30%" src={logo} alt="logo" onClick={toggleDrawer} />
-          </ListItem>
-          <Divider /> */}
-          <Tabs
-            orientation="vertical"
-            value={path}
-            onChange={handleClick}
-          >
-            <CustomTab label="Home" component={Link} to="/" value="/" onClick={toggleDrawer} />
-            <CustomTab label="Projects" component={Link} to="/projects" value="/projects" onClick={toggleDrawer} />
-            <CustomTab label="About" component={Link} to="/about" value="/about" onClick={toggleDrawer} />
-            <CustomTab label="Contact" component={Link} to="/contact" value="/contact" onClick={toggleDrawer} />
-          </Tabs>
-        </List>
+        <Grid container alignItems="center">
+          <Grid item xs={12} container justifyContent="center" alignItems="center">
+            <img className="logo" src={logo} alt="logo" onClick={toggleDrawer} />
+          </Grid>
+          <Grid item xs={12} container justifyContent="flex-start">
+            <List>
+              <Tabs
+                orientation="vertical"
+                value={path}
+                onChange={handleClick}
+                TabIndicatorProps={{ style: { left: 0 } }}
+              >
+                <CustomTab label="Home" component={Link} to="/" value="/" onClick={toggleDrawer} />
+                <CustomTab label="Projects" component={Link} to="/projects" value="/projects" onClick={toggleDrawer} />
+                <CustomTab label="About" component={Link} to="/about" value="/about" onClick={toggleDrawer} />
+                <CustomTab label="Contact" component={Link} to="/contact" value="/contact" onClick={toggleDrawer} />
+              </Tabs>
+            </List>
+          </Grid>
+        </Grid>
       </Drawer>
     </>
   );

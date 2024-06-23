@@ -38,7 +38,7 @@
 }
 
 /* logo style */
-img {
+.logo {
   max-width:60%;
   height: auto;
   padding: 0;
