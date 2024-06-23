@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AppBar, Toolbar, Grid, Tabs, Tab, styled } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import MenuDrawer from "./MenuDrawer";
-import logo from "../assets/image/logo.png";
+import logo from "../assets/image/logo.png"
 
 const CustomTab = styled(Tab)(({ theme }) => ({
   fontSize: '16px',
