@@ -46,10 +46,10 @@ const MenuDrawer = ({handleClick, path}) => {
                 onChange={handleClick}
                 TabIndicatorProps={{ style: { left: 0 } }}
               >
-                <CustomTab label="Home" component={Link} to="/" value="/" onClick={toggleDrawer} />
-                <CustomTab label="Projects" component={Link} to="/projects" value="/projects" onClick={toggleDrawer} />
-                <CustomTab label="About" component={Link} to="/about" value="/about" onClick={toggleDrawer} />
-                <CustomTab label="Contact" component={Link} to="/contact" value="/contact" onClick={toggleDrawer} />
+                <CustomTab label="Home" component={Link} to="/#home" value="/" onClick={toggleDrawer} />
+                <CustomTab label="Projects" component={Link} to="/#projects" value="/projects" onClick={toggleDrawer} />
+                <CustomTab label="About" component={Link} to="/#about" value="/about" onClick={toggleDrawer} />
+                <CustomTab label="Contact" component={Link} to="/#contact" value="/contact" onClick={toggleDrawer} />
               </Tabs>
             </List>
           </Grid>

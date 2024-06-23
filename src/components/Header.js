@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useHistory } from "react";
 import { AppBar, Toolbar, Grid, Tabs, Tab, styled } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import MenuDrawer from "./MenuDrawer";
@@ -11,19 +11,21 @@ const CustomTab = styled(Tab)(({ theme }) => ({
 
 const Header = () => {
   const location = useLocation();
+  console.log(location);
   const [path, setPath] = useState(location.pathname);
+  console.log(path);
 
   useEffect(() => {
     setPath(path);
   }, [path]);
 
   const handleClick = (event, newValue) => {
-    // console.log(newValue);
     setPath(newValue);
+    console.log(newValue);
   };
 
   return (
-    <AppBar position="sticky" color="transparent">
+    <AppBar className="header" position="sticky" color="transparent">
       <Toolbar>
         <Grid container spacing={2} alignItems="center">
           {/* Logo for md screen */}
@@ -39,22 +41,23 @@ const Header = () => {
           >
             <Tabs
               value={path}
+              // value={sectionId || 'home'}
               onChange={handleClick}
               textColor="secondary"
               indicatorColor="secondary"
             >
-              <CustomTab label="Home" component={Link} to="/" value="/" />
+              <CustomTab label="Home" component={Link} to="/#home" value="/" />
               <CustomTab
                 label="Projects"
                 component={Link}
-                to="/projects"
+                to="/#projects"
                 value="/projects"
               />
-              <CustomTab label="About" component={Link} to="/about" value="/about" />
+              <CustomTab label="About" component={Link} to="/#about" value="/about" />
               <CustomTab
                 label="Contact"
                 component={Link}
-                to="/contact"
+                to="/#contact"
                 value="/contact"
               />
             </Tabs>

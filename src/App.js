@@ -1,16 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
-import { Outlet, createBrowserRouter } from "react-router-dom"; 
-import Projetcs from "./components/Projetcs";
+import { Outlet, createBrowserRouter } from "react-router-dom";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      {/* <main className="content"> */}
-        <Outlet />
-      {/* </main> */}
+      <Outlet />
     </div>
   );
 }
@@ -21,9 +19,17 @@ const router = createBrowserRouter([
     'element': <App />,
     'children': [
       {
-        'path': '/projects',
-        'element': <Projetcs />
+        'path': '/:sectionId?',
+        'element': <Home />
       }
+      // {
+      //   'path': '/about',
+      //   'element': <About />
+      // },
+      // {
+      //   'path': '/contact',
+      //   'element': <Contact />
+      // }
     ]
   }
 ], { basename: "/portfolio" });
