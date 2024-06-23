@@ -5,7 +5,7 @@ import MenuDrawer from "./MenuDrawer";
 import logo from "../assets/image/logo.png"
 
 const CustomTab = styled(Tab)(({ theme }) => ({
-  fontSize: '16px',
+  fontSize: '14px',
   fontWeight: 'bold'
 }));
 
@@ -18,7 +18,7 @@ const Header = () => {
   }, [path]);
 
   const handleClick = (event, newValue) => {
-    console.log(newValue);
+    // console.log(newValue);
     setPath(newValue);
   };
 

@@ -6,7 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import logo from "../assets/image/logo.png";
 
 const CustomTab = styled(Tab)(({ theme }) => ({
-  fontSize: '16px',
+  fontSize: '14px',
   fontWeight: 'bold',
   alignItems: 'flex-start'
 }));
