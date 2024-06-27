@@ -47,4 +47,69 @@
   max-width: 100%;
 }
 
+/* plane position */
+
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-container {
+  width: 100%;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  max-width: 20%;
+  height: auto;
+  z-index: 10;
+  animation: float-plane 25s linear infinite;
+}
+
+@keyframes float-plane {
+  0% {
+    left: 0; /* Start position on the left */
+    transform: scaleX(1); /* Initial scale */
+  }
+  50% {
+    left: calc(94% - 100px); /* End position on the right */
+    transform: scaleX(1); /* Maintain original scale */
+  }
+  51% {
+    transform: scaleX(-1); /* Flip horizontally */
+  }
+  100% {
+    left: 0; /* Back to the start position */
+    transform: scaleX(-1); /* Maintain flip and original scale */
+  }
+}
+
+
+/* @media (max-width: 1200px) {
+  .overlay-image {
+    max-width: 25%;
+    bottom: 15%;
+    right: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay-image {
+    max-width: 30%;
+    bottom: 20%;
+    right: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-image {
+    max-width: 40%;
+    bottom: 40%;
+    right: 5%;
+  }
+} */
+
 
