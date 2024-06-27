@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, useHistory } from "react";
 import { AppBar, Toolbar, Grid, Tabs, Tab, styled } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import MenuDrawer from "./MenuDrawer";
-import logo from "../assets/image/logo.png"
+import logo from "../assets/images/logo.png"
 
 const CustomTab = styled(Tab)(({ theme }) => ({
   fontSize: '14px',
@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar className="header" position="sticky" color="transparent">
+    <AppBar direction="row" position="sticky" sx={{ bgcolor: "white", top: 0 }}>
       <Toolbar>
         <Grid container spacing={2} alignItems="center">
           {/* Logo for md screen */}

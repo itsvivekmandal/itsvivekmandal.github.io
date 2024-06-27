@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
 import { Outlet, createBrowserRouter } from "react-router-dom";
-import Home from "./components/Home";
+import Body from "./components/Body";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     'children': [
       {
         'path': '/:sectionId?',
-        'element': <Home />
+        'element': <Body />
       }
       // {
       //   'path': '/about',

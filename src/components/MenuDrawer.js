@@ -3,7 +3,7 @@ import {Link } from 'react-router-dom';
 import { Drawer, List, ListItem, ListItemText, Tabs, Tab, Divider, styled, Grid } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from "../assets/image/logo.png";
+import logo from "../assets/images/logo.png";
 
 const CustomTab = styled(Tab)(({ theme }) => ({
   fontSize: '14px',
