@@ -39,8 +39,7 @@
 
 /* logo style */
 .logo {
-  max-width:50%;
-  height: auto;
+  width:50%;
 }
 
 .banner {
@@ -94,6 +93,10 @@
     right: 5%;
     top: 5%
   }
+
+  .logo {
+    width:20%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -101,6 +104,10 @@
     bottom: 40%;
     right: 5%;
     top: 1%;
+  }
+
+  .logo {
+    width:30%;
   }
 }
 
