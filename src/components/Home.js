@@ -21,7 +21,11 @@ const Home = () => {
             justifyContent: 'center',
             fontFamily: '"Dancing Script", cursive',
             fontSize: '5rem',
-            '@media (max-width: 600px)': {
+            '@media (max-width: 768px)': {
+              fontSize: '3rem',
+              top: '30%',
+            },
+            '@media (max-width: 480px)': {
               fontSize: '2.5rem',
               top: '18%',
             },
@@ -37,7 +41,11 @@ const Home = () => {
             display: 'flex',
             justifyContent: 'center',
             fontSize: '3rem',
-            '@media (max-width: 600px)': {
+            '@media (max-width: 768px)': {
+              fontSize: '2rem',
+              top: '50%',
+            },
+            '@media (max-width: 480px)': {
               fontSize: '1.5rem',
               top: '45%',
             },
