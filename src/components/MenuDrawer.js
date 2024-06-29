@@ -22,7 +22,7 @@ const MenuDrawer = ({handleClick, path}) => {
   return (
     <>
       <IconButton
-        color="inherit"
+        // color="inherit"
         aria-label="open drawer"
         onClick={toggleDrawer}
         edge="end"

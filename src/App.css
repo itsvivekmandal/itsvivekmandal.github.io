@@ -61,7 +61,7 @@
 
 .overlay-image {
   position: absolute;
-  top: 30%;
+  top: 10%;
   left: 5%;
   max-width: 20%;
   height: auto;
@@ -103,13 +103,21 @@
     right: 5%;
   }
 }
-
+*/
 @media (max-width: 480px) {
   .overlay-image {
-    max-width: 40%;
+    /* max-width: 40%; */
     bottom: 40%;
     right: 5%;
+    top: 1%;
   }
+}
+
+/* .dancing-script-title {
+  font-family: "Dancing Script", cursive !important;
+  font-optical-sizing: auto;
+  font-weight: 400; // 400 to 700
+  font-style: normal;
 } */
 
 
