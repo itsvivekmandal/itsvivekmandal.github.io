@@ -38,17 +38,17 @@ const Body = () => {
         </section>
       </Grid>
       <Grid item xs={12} md={12}>
-        <section ref={projectsRef} id="projects" style={{ padding: '50px 0' }}>
-          <Projects />
-        </section>
-      </Grid>
-      <Grid item xs={12} md={12}>
-        <section ref={aboutRef} id="about" style={{ padding: '50px 0' }}>
+        <section ref={aboutRef} id="about" style={{ padding: '20px 15px' }}>
           <About />
         </section >
       </Grid>
       <Grid item xs={12} md={12}>
-        <section ref={contactRef} id="contact" style={{ padding: '50px 0' }}>
+        <section ref={projectsRef} id="projects" style={{ padding: '20px 15px' }}>
+          <Projects />
+        </section>
+      </Grid>
+      <Grid item xs={12} md={12}>
+        <section ref={contactRef} id="contact" style={{ padding: '20px 15px' }}>
           <Contact />
         </section>
       </Grid>

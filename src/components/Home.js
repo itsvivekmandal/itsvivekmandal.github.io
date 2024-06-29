@@ -10,7 +10,6 @@ const Home = () => {
       <div className="container">
         <img src={clouds} alt="clouds" className='banner'/>
         <img src={plane} alt="Overlay" className="overlay-image fly-right" />
-        <p className='dancing-script-title'>test</p>
         <Typography
           component="p"
           sx={{
