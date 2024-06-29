@@ -23,7 +23,7 @@ const Home = () => {
             fontSize: '5rem',
             '@media (max-width: 600px)': {
               fontSize: '2.5rem',
-              top: '20%',
+              top: '18%',
             },
           }}
          >Vivek Mandal</Typography>
@@ -39,7 +39,7 @@ const Home = () => {
             fontSize: '3rem',
             '@media (max-width: 600px)': {
               fontSize: '1.5rem',
-              top: '50%',
+              top: '45%',
             },
           }}
          > I am&nbsp;
