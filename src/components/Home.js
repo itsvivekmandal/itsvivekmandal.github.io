@@ -22,11 +22,11 @@ const Home = () => {
             fontSize: '5rem',
             '@media (max-width: 768px)': {
               fontSize: '3rem',
-              top: '30%',
+              top: '40%',
             },
             '@media (max-width: 480px)': {
               fontSize: '2.5rem',
-              top: '18%',
+              top: '25%',
             },
           }}
          >Vivek Mandal</Typography>
@@ -42,11 +42,11 @@ const Home = () => {
             fontSize: '3rem',
             '@media (max-width: 768px)': {
               fontSize: '2rem',
-              top: '50%',
+              top: '70%',
             },
             '@media (max-width: 480px)': {
               fontSize: '1.5rem',
-              top: '45%',
+              top: '60%',
             },
           }}
          > I am&nbsp;
