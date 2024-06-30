@@ -43,7 +43,7 @@ const About = () => {
             <Link href="https://stackoverflow.com/users/10856577/vivek-mandal" target="_blank">
               <img src={stackoverflow} alt="stackoverflow" width={35}/>
             </Link>
-            <Link href="hhttps://leetcode.com/u/VivekMandal" target="_blank">
+            <Link href="https://leetcode.com/u/VivekMandal" target="_blank">
               <img src={leetcode} alt="leetcode" width={35}/>
             </Link>
             <Link href="mailto:vivek248.vm@gmail.com" target="_blank">
