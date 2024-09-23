@@ -25,7 +25,7 @@ const About = () => {
     ],
     xAxis: [{ scaleType: 'band', data: ['Node', 'React', 'PHP', 'JavaScript', 'Sql', 'Mongo'] }],
     yAxis: [{max: 10}],
-    height: 500,
+    height: 400,
     slotProps: {
       legend: {
         hidden: true,
@@ -48,7 +48,7 @@ const About = () => {
         highlightScope: { highlight: 'item', fade: 'global' },
       },
     ],
-    height: 500,
+    height: 400,
     slotProps: {
       legend: {
         hidden: true,
