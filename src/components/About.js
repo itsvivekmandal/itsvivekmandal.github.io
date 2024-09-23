@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid,Box, Typography, Button, Link } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import profile from "../assets/images/profile.jpg";
@@ -8,9 +8,53 @@ import leetcode from "../assets/images/leetcode.png";
 import stackoverflow from "../assets/images/stack.png";
 import mail from "../assets/images/mail.png";
 import resume from "../assets/resume/resume.pdf";
-import { Gauge, gaugeClasses } from '@mui/x-charts/Gauge';
+import { BarChart, BarChartProps } from '@mui/x-charts/BarChart';
+import { PieChart, PieChartProps } from '@mui/x-charts/PieChart';
 
 const About = () => {
+
+  const [highlightedItem, setHighLightedItem] = useState(null);
+
+  const barChartsProps = {
+    series: [
+      {
+        data: [5, 4.5, 8, 7, 8, 4],
+        id: 'sync',
+        highlightScope: { highlight: 'item', fade: 'global' },
+      },
+    ],
+    xAxis: [{ scaleType: 'band', data: ['Node', 'React', 'PHP', 'JavaScript', 'Sql', 'Mongo'] }],
+    yAxis: [{max: 10}],
+    height: 500,
+    slotProps: {
+      legend: {
+        hidden: true,
+      },
+    },
+  };
+  
+  const pieChartProps = {
+    series: [
+      {
+        id: 'sync',
+        data: [
+          { value: 5, label: 'Node', id: 'Node' },
+          { value: 4.5, label: 'React', id: 'React' },
+          { value: 8, label: 'PHP', id: 'PHP' },
+          { value: 7, label: 'JavaScript', id: 'JavaScript' },
+          { value: 8, label: 'Sql', id: 'Sql' },
+          { value: 4, label: 'Mongo', id: 'Mongo' },
+        ],
+        highlightScope: { highlight: 'item', fade: 'global' },
+      },
+    ],
+    height: 500,
+    slotProps: {
+      legend: {
+        hidden: true,
+      },
+    },
+  };
 
   const settings = {
     width: 150,
@@ -99,6 +143,7 @@ const About = () => {
           Download My Resume
         </Button>
       </Grid>
+      {/* Skill Section */}
       <Grid item xs={12} md={12} textAlign="center">
         <Typography variant="h4" gutterBottom
           sx={{
@@ -119,23 +164,20 @@ const About = () => {
         >
           Skills
         </Typography>
-        <div>
-          <Gauge
-            {...settings}
-            cornerRadius="50%"
-            sx={(theme) => ({
-              [`& .${gaugeClasses.valueText}`]: {
-                fontSize: 40,
-              },
-              [`& .${gaugeClasses.valueArc}`]: {
-                fill: '#52b202',
-              },
-              [`& .${gaugeClasses.referenceArc}`]: {
-                fill: theme.palette.text.disabled,
-              },
-            })}
-          />
-        </div>
+      </Grid>
+      <Grid item xs={12} md={4} textAlign="center"> 
+        <BarChart
+          {...barChartsProps}
+          highlightedItem={highlightedItem}
+          onHighlightChange={setHighLightedItem}
+        />
+      </Grid>
+      <Grid item xs={12} md={4} textAlign="center"> 
+        <PieChart
+          {...pieChartProps}
+          highlightedItem={highlightedItem}
+          onHighlightChange={setHighLightedItem}
+        />
       </Grid>
     </Grid>
   )
