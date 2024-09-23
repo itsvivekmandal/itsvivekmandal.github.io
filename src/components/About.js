@@ -165,14 +165,14 @@ const About = () => {
           Skills
         </Typography>
       </Grid>
-      <Grid item xs={12} md={4} textAlign="center"> 
+      <Grid item xs={12} md={6} textAlign="center"> 
         <BarChart
           {...barChartsProps}
           highlightedItem={highlightedItem}
           onHighlightChange={setHighLightedItem}
         />
       </Grid>
-      <Grid item xs={12} md={4} textAlign="center"> 
+      <Grid item xs={12} md={6} textAlign="center"> 
         <PieChart
           {...pieChartProps}
           highlightedItem={highlightedItem}
