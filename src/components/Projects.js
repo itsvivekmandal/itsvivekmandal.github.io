@@ -156,7 +156,7 @@ const Projects = () => {
                     key={index}
                     variant="outlined"
                     sx={{
-                      maxWidth: 400,
+                      maxWidth: {xs: "80%", md: "25%"},
                       marginRight: 2,
                       display: 'inline-block',
                       flexShrink: 0,
