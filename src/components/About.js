@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid,Box, Typography, Button, Link, Stack, Paper } from "@mui/material";
+import { Typography, Button, Link, Stack, Paper } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import profile from "../assets/images/profile.jpg";
 import github from "../assets/images/github.png";
@@ -8,7 +8,7 @@ import leetcode from "../assets/images/leetcode.png";
 import stackoverflow from "../assets/images/stack.png";
 import mail from "../assets/images/mail.png";
 import resume from "../assets/resume/resume.pdf";
-import { BarChart, BarChartProps } from '@mui/x-charts/BarChart';
+import { BarChart } from '@mui/x-charts/BarChart';
 import node from "../assets/images/node.svg";
 import javascript from "../assets/images/javascript.svg";
 import php from "../assets/images/php.svg";
