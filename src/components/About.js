@@ -21,7 +21,7 @@ import bootstrap from "../assets/images/bootstrap.png";
 
 const AboutMe = ({downloadResume}) => {
   return (
-    <Paper elevation={3} sx={{ padding: "24px", margin: "16px 0" }}>
+    <Paper elevation={3} sx={{ padding: "15px", margin: "16px 0" }}>
       <Typography variant="h4" gutterBottom
           sx={{
             position: 'relative',
@@ -85,7 +85,7 @@ const AboutMe = ({downloadResume}) => {
         </Stack>
 
         {/* Bio Section */}
-        <Stack direction="column" spacing={2} sx={{ width: { xs: "100%", md: "60%" } }}>
+        <Stack direction="column" spacing={2} sx={{ width: { xs: "100%", md: "50%" } }}>
           <Typography variant="body1" align="left" fontSize="1.2rem">
             <span>
               Hi, I'm Vivek Mandal, a passionate Software Engineer based in eBrandz, currently enjoying my 30s. I thrive on challenges and have a deep love for coding, turning ideas into reality through elegant solutions.<br/>
