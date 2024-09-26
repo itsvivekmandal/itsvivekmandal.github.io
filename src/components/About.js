@@ -13,11 +13,11 @@ import node from "../assets/images/node.svg";
 import javascript from "../assets/images/javascript.svg";
 import php from "../assets/images/php.svg";
 import html from "../assets/images/html.svg";
-import mongodb from "../assets/images/mongodb.svg";
+import mongodb from "../assets/images/mongo.png";
 import mysql from "../assets/images/mysql.svg";
 import react from "../assets/images/react.svg";
 import git from "../assets/images/git.svg";
-import bootstrap from "../assets/images/bootstrap.svg";
+import bootstrap from "../assets/images/bootstrap.png";
 
 const AboutMe = ({downloadResume}) => {
   return (
@@ -163,19 +163,19 @@ const Skills = () => {
           sx={{ width: '100%' }}
         >
           <Stack direction="row" spacing={6}>
-            <img src={node} alt="node" width={60} />
-            <img src={react} alt="react" width={60} />
-            <img src={php} alt="php" width={60} />
+            <img src={node} alt="node" width={70} />
+            <img src={react} alt="react" width={70} />
+            <img src={php} alt="php" width={70} />
           </Stack>
           <Stack direction="row" spacing={6}>
-            <img src={javascript} alt="javascript" width={60} />
-            <img src={mongodb} alt="mongodb" width={60} />
-            <img src={mysql} alt="mysql" width={60} />
+            <img src={javascript} alt="javascript" width={70} />
+            <img src={mongodb} alt="mongodb" width={70} />
+            <img src={mysql} alt="mysql" width={70} />
           </Stack>
           <Stack direction="row" spacing={6}>
-            <img src={html} alt="html" width={60} />
-            <img src={bootstrap} alt="bootstrap" width={60} />
-            <img src={git} alt="git" width={60} />
+            <img src={html} alt="html" width={70} />
+            <img src={bootstrap} alt="bootstrap" width={70} />
+            <img src={git} alt="git" width={70} />
           </Stack>
         </Stack>
         <Stack
@@ -196,12 +196,6 @@ const Skills = () => {
 };
 
 const About = () => {
-
-  const settings = {
-    width: 150,
-    height: 150,
-    value: 90,
-  };  
 
   const downloadResume = () => {
     const anchor = document.createElement('a');
