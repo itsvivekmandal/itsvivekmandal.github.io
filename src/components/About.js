@@ -130,7 +130,7 @@ const Skills = () => {
   };
   
   return (
-    <Paper elevation={3} sx={{ padding: "24px", margin: "16px 0" }}>
+    <Paper elevation={3} sx={{ padding: "15px", margin: "16px 0" }}>
       <Typography variant="h4" gutterBottom
           sx={{
             position: 'relative',
