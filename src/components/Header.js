@@ -11,9 +11,9 @@ const CustomTab = styled(Tab)(({ theme }) => ({
 
 const Header = () => {
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
   const [path, setPath] = useState(location.pathname);
-  console.log(path);
+  // console.log(path);
 
   useEffect(() => {
     setPath(path);
@@ -21,7 +21,7 @@ const Header = () => {
 
   const handleClick = (event, newValue) => {
     setPath(newValue);
-    console.log(newValue);
+    // console.log(newValue);
   };
 
   return (

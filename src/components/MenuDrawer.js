@@ -15,7 +15,7 @@ const MenuDrawer = ({handleClick, path}) => {
   const [drawer, setDrawer] = useState(false);
 
   const toggleDrawer = () => {
-    console.log(drawer);
+    // console.log(drawer);
     setDrawer(!drawer);
   };
   

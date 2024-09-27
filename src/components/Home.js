@@ -1,8 +1,7 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import clouds from '../assets/images/clouds.png';
 import plane from '../assets/images/plane_1.gif';
 import TypewriterComponent from 'typewriter-effect';
-// import {Typography} from '@mui/material';
 
 const Home = () => {
   return (
@@ -31,7 +30,7 @@ const Home = () => {
           }}
          >Vivek Mandal</Typography>
         <Typography
-          component="p"
+          component="div"
           sx={{
             position: 'absolute',
             top: '60%',
