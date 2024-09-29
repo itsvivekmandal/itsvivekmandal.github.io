@@ -1,6 +1,5 @@
 import {useState} from "react";
-import {Link } from 'react-router-dom';
-import { Drawer, List, ListItem, ListItemText, Tabs, Tab, Divider, styled, Grid } from "@mui/material";
+import { Drawer, List, Tabs, Tab, styled, Grid } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from "../assets/images/logo.png";
@@ -46,10 +45,11 @@ const MenuDrawer = ({handleClick, path}) => {
                 onChange={handleClick}
                 TabIndicatorProps={{ style: { left: 0 } }}
               >
-                <CustomTab label="Home" component={Link} to="/#home" value="/" onClick={toggleDrawer} />
-                <CustomTab label="Projects" component={Link} to="/#projects" value="/projects" onClick={toggleDrawer} />
-                <CustomTab label="About" component={Link} to="/#about" value="/about" onClick={toggleDrawer} />
-                <CustomTab label="Contact" component={Link} to="/#contact" value="/contact" onClick={toggleDrawer} />
+                <CustomTab label="Home" value="/" onClick={toggleDrawer} />
+                <CustomTab label="About" value="/about" onClick={toggleDrawer} />
+                <CustomTab label="Projects" value="/projects" onClick={toggleDrawer} />
+                <CustomTab label="Contact" value="/contact" onClick={toggleDrawer} />
+                <CustomTab label="Blog" value="/blog" onClick={toggleDrawer} />
               </Tabs>
             </List>
           </Grid>

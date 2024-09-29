@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AppBar, Toolbar, Grid, Tabs, Tab, styled } from "@mui/material";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import MenuDrawer from "./MenuDrawer";
 import logo from "../assets/images/logo.png";
 
@@ -11,17 +11,16 @@ const CustomTab = styled(Tab)(({ theme }) => ({
 
 const Header = () => {
   const location = useLocation();
-  // console.log(location);
+  const navigate = useNavigate();  // Use navigate for full-page routing
   const [path, setPath] = useState(location.pathname);
-  // console.log(path);
 
   useEffect(() => {
-    setPath(path);
-  }, [path]);
+    setPath(location.pathname);  // Make sure the path is synced with the current route
+  }, [location]);
 
+  // Handle both in-page scrolling and routing
   const handleClick = (event, newValue) => {
-    setPath(newValue);
-    // console.log(newValue);
+    navigate(newValue);
   };
 
   return (
@@ -41,25 +40,17 @@ const Header = () => {
           >
             <Tabs
               value={path}
-              // value={sectionId || 'home'}
               onChange={handleClick}
               textColor="secondary"
               indicatorColor="secondary"
             >
-              <CustomTab label="Home" component={Link} to="/#home" value="/" />
-              <CustomTab
-                label="Projects"
-                component={Link}
-                to="/#projects"
-                value="/projects"
-              />
-              <CustomTab label="About" component={Link} to="/#about" value="/about" />
-              <CustomTab
-                label="Contact"
-                component={Link}
-                to="/#contact"
-                value="/contact"
-              />
+              {/* In-page scrolling */}
+              <CustomTab label="Home" value="/" />
+              <CustomTab label="About" value="/about" />
+              <CustomTab label="Projects" value="/projects" />
+              <CustomTab label="Contact" value="/contact" />
+              {/* Full-page routing */}
+              <CustomTab label="Blog" value="/blog" />
             </Tabs>
           </Grid>
           {/* Burger menu for small screen */}

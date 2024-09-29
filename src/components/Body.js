@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';  // Use useParams to get sectionId from the route
 import { Grid } from '@mui/material';
 import Home from './Home';
 import Projects from "./Projects";
@@ -7,30 +7,27 @@ import About from "./About";
 import Contact from "./Contact";
 
 const Body = () => {
+  const { sectionId } = useParams();  // Extract sectionId from the route
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
-  const location = useLocation();
-
   useEffect(() => {
-    if (location.hash) {
-      const sectionId = location.hash.substring(1);
-      const sectionRef = {
-        home: homeRef,
-        about: aboutRef,
-        projects: projectsRef,
-        contact: contactRef,
-      }[sectionId];
+    // Check if sectionId exists and match it to the correct section
+    const sectionRef = {
+      home: homeRef,
+      about: aboutRef,
+      projects: projectsRef,
+      contact: contactRef,
+    }[sectionId || 'home'];
 
-      if (sectionRef && sectionRef.current) {
-        sectionRef.current.scrollIntoView({ behavior: 'smooth' });
-      }
+    if (sectionRef && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [location]);
+  }, [sectionId]);
 
-  return(
+  return (
     <Grid container>
       <Grid item xs={12} md={12}>
         <section id="home" ref={homeRef}>
