@@ -26,8 +26,8 @@ const AboutMe = ({downloadResume}) => {
           sx={{
             position: 'relative',
             display: 'inline-block',
-            marginTop: '16px',
-            marginBottom: '16px',
+            marginTop: '20px',
+            marginBottom: '20px',
             '&::after': {
               content: '""',
               position: 'absolute',
@@ -65,35 +65,7 @@ const AboutMe = ({downloadResume}) => {
             }}
           />
           {/* Social Links */}
-          {/* <Stack direction="row" spacing={2} justifyContent="center">
-            <Link href="https://github.com/itsvivekmandal" target="_blank">
-              <img src={github} alt="github" width={35} />
-            </Link>
-            <Link href="https://www.linkedin.com/in/itsvivekmandal" target="_blank">
-              <img src={linkedin} alt="linkedin" width={35} />
-            </Link>
-            <Link href="https://stackoverflow.com/users/10856577/vivek-mandal" target="_blank">
-              <img src={stackoverflow} alt="stackoverflow" width={35} />
-            </Link>
-            <Link href="https://leetcode.com/u/VivekMandal" target="_blank">
-              <img src={leetcode} alt="leetcode" width={35} />
-            </Link>
-            <Link href="mailto:vivek248.vm@gmail.com" target="_blank">
-              <img src={mail} alt="mail" width={35} />
-            </Link>
-          </Stack> */}
-        </Stack>
-
-        {/* Bio Section */}
-        <Stack direction="column" spacing={2} sx={{ width: { xs: "100%", md: "50%" } }}>
-          <Typography variant="body1" align="left" fontSize="1.2rem">
-            <span>
-              Hi, I'm Vivek Mandal, a passionate Software Engineer based in eBrandz, currently enjoying my 30s. I thrive on challenges and have a deep love for coding, turning ideas into reality through elegant solutions.<br/>
-              At eBrandz, I contribute to innovative projects that push boundaries in web development. My motivation stems from seeing ideas come to life and making a tangible impact on the digital landscape.<br/>
-              Let's connect and explore how we can innovate together. I'm always eager to collaborate on exciting projects that challenge the norm.
-            </span>
-          </Typography>
-          <Stack direction="row" spacing={2} justifyContent="left" sx={{ padding: "15px"}}>
+          <Stack direction="row" spacing={2} justifyContent="center">
             <Link href="https://github.com/itsvivekmandal" target="_blank">
               <img src={github} alt="github" width={35} />
             </Link>
@@ -110,12 +82,40 @@ const AboutMe = ({downloadResume}) => {
               <img src={mail} alt="mail" width={35} />
             </Link>
           </Stack>
+        </Stack>
+
+        {/* Bio Section */}
+        <Stack direction="column" spacing={4} sx={{ width: { xs: "100%", md: "50%" } }}>
+          <Typography variant="body1" align="left" fontSize="1.2rem">
+            <span>
+              Hi, I'm Vivek Mandal, a passionate Software Engineer based in eBrandz, currently enjoying my 30s. I thrive on challenges and have a deep love for coding, turning ideas into reality through elegant solutions.<br/>
+              At eBrandz, I contribute to innovative projects that push boundaries in web development. My motivation stems from seeing ideas come to life and making a tangible impact on the digital landscape.<br/>
+              Let's connect and explore how we can innovate together. I'm always eager to collaborate on exciting projects that challenge the norm.
+            </span>
+          </Typography>
+          {/* <Stack direction="row" spacing={2} justifyContent="left" sx={{ padding: "15px"}}>
+            <Link href="https://github.com/itsvivekmandal" target="_blank">
+              <img src={github} alt="github" width={35} />
+            </Link>
+            <Link href="https://www.linkedin.com/in/itsvivekmandal" target="_blank">
+              <img src={linkedin} alt="linkedin" width={35} />
+            </Link>
+            <Link href="https://stackoverflow.com/users/10856577/vivek-mandal" target="_blank">
+              <img src={stackoverflow} alt="stackoverflow" width={35} />
+            </Link>
+            <Link href="https://leetcode.com/u/VivekMandal" target="_blank">
+              <img src={leetcode} alt="leetcode" width={35} />
+            </Link>
+            <Link href="mailto:vivek248.vm@gmail.com" target="_blank">
+              <img src={mail} alt="mail" width={35} />
+            </Link>
+          </Stack> */}
           <Button
             variant="contained"
             color="secondary"
             size="large"
             onClick={downloadResume}
-            sx={{ alignSelf: { xs: "center", md: "flex-start" }, marginTop: "20px" }} // Center button on mobile, left on larger screens
+            sx={{ alignSelf: { xs: "center", md: "flex-start" }}} // Center button on mobile, left on larger screens
           >
             Download My Resume
           </Button>
@@ -152,8 +152,8 @@ const Skills = () => {
           sx={{
             position: 'relative',
             display: 'inline-block',
-            marginTop: '16px',
-            marginBottom: '16px',
+            marginTop: '30px',
+            marginBottom: '30px',
             '&::after': {
               content: '""',
               position: 'absolute',
