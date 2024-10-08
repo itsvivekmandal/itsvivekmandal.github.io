@@ -26,7 +26,7 @@ const Footer = () => {
             width: isSmallScreen ? '100%' : '40%', // 100% on small screens, 40% on larger
           }}
         />
-        <Typography component="p" sx={{ fontWeight: 'bold', color: '#848484'}}>No © copyright issues - {new Date().getFullYear()}</Typography>
+        <Typography component="p" sx={{ fontWeight: 'bold', color: '#848484'}}>No &copy; copyright issues - {new Date().getFullYear()}</Typography>
       </Grid>
     </Grid>
   );
