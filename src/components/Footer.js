@@ -1,15 +1,34 @@
-import know_india from "../assets/images/know_india.jpg";
 import india from "../assets/images/india.jpg";
-import footer from "../assets/images/footer.jpg";
-import { Grid } from '@mui/material';
-// import '@fontsource/caveat';
+import { Grid, Typography, useMediaQuery, useTheme} from '@mui/material';
 
 const Footer = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
-    <div style={{ position: 'relative', textAlign: 'center', width: '100%' }}>
-      {/* Background Image */}
-      <img src={india} alt="know_india" width="40%"  /> {/* Apply image opacity */}
-    </div>
+    <Grid container spacing={3} style={{ padding: '20px' }} justifyContent="center">
+      <Grid item xs={12} md={12} style={{ textAlign: 'center' }}>
+        <Typography
+            component="p"
+            sx={{
+              fontFamily: '"Dancing Script", cursive',
+              fontSize: '3rem',
+              color: '#9c27b0'
+            }}
+          >
+          Vivek Mandal
+        </Typography>
+        <Typography component="p" sx={{color: '#848484'}}>
+          Coded with ❤️ using React in India 🇮🇳
+        </Typography>
+        <img src={india} alt="know_india"
+          style={{
+            width: isSmallScreen ? '100%' : '40%', // 100% on small screens, 40% on larger
+          }}
+        />
+        <Typography component="p" sx={{ fontWeight: 'bold', color: '#848484'}}>No © copyright issues - {new Date().getFullYear()}</Typography>
+      </Grid>
+    </Grid>
   );
 };
 
