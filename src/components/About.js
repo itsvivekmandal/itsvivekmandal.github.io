@@ -217,20 +217,20 @@ const AnimatedCounter = () => {
   return (
     <Grid container spacing={4} style={{ padding: '20px' }} justifyContent="center">
       <Grid item xs={3} md={2} style={{ textAlign: 'center' }}>
-        <Typography variant="h3" color="secondary" gutterBottom sx={{ fontWeight: 'bold' }}><CountUp start={0} end={150000} duration={2} />+</Typography>
-        <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>Lines of code</Typography>
+        <Typography variant="h3" color="secondary" gutterBottom><CountUp start={0} end={150000} duration={4.5} />+</Typography>
+        <Typography variant="h6" gutterBottom>Lines of code</Typography>
       </Grid>
       <Grid item xs={3} md={2} style={{ textAlign: 'center' }}>
-        <Typography variant="h3" color="secondary" gutterBottom sx={{ fontWeight: 'bold' }}><CountUp start={0} end={1000} duration={2} />+</Typography>
-        <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>Cups of coffee drunk</Typography>
+        <Typography variant="h3" color="secondary" gutterBottom><CountUp start={0} end={1000} duration={4.5} />+</Typography>
+        <Typography variant="h6" gutterBottom>Cups of coffee drunk</Typography>
       </Grid>
       <Grid item xs={3} md={2} style={{ textAlign: 'center' }}>
-        <Typography variant="h3" color="secondary" gutterBottom sx={{ fontWeight: 'bold' }}><CountUp start={0} end={19} duration={2} />+</Typography>
-        <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>Projects completed</Typography>
+        <Typography variant="h3" color="secondary" gutterBottom><CountUp start={0} end={19} duration={4.5} />+</Typography>
+        <Typography variant="h6" gutterBottom>Projects completed</Typography>
       </Grid>
       <Grid item xs={3} md={2} style={{ textAlign: 'center' }}>
-        <Typography variant="h3" color="secondary" gutterBottom sx={{ fontWeight: 'bold' }}><CountUp start={0} end={5} duration={2} />+</Typography>
-        <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>Years of experience</Typography>
+        <Typography variant="h3" color="secondary" gutterBottom><CountUp start={0} end={5} duration={4.5} />+</Typography>
+        <Typography variant="h6" gutterBottom>Years of experience</Typography>
       </Grid>
     </Grid>
   );
