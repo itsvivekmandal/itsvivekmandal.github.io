@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Typography, Button, Link, Stack, Paper } from "@mui/material";
+import { Grid, Typography, Button, Link, Stack, Divider } from "@mui/material";
+import CountUp from "react-countup";
 import Avatar from "@mui/material/Avatar";
 import profile from "../assets/images/profile.jpg";
 import github from "../assets/images/github.png";
@@ -212,6 +213,29 @@ const Skills = () => {
   );
 };
 
+const AnimatedCounter = () => {
+  return (
+    <Grid container spacing={4} style={{ padding: '20px' }} justifyContent="center">
+      <Grid item xs={3} md={2} style={{ textAlign: 'center' }}>
+        <Typography variant="h3" color="secondary" gutterBottom sx={{ fontWeight: 'bold' }}><CountUp start={0} end={150000} duration={2} />+</Typography>
+        <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>Lines of code</Typography>
+      </Grid>
+      <Grid item xs={3} md={2} style={{ textAlign: 'center' }}>
+        <Typography variant="h3" color="secondary" gutterBottom sx={{ fontWeight: 'bold' }}><CountUp start={0} end={1000} duration={2} />+</Typography>
+        <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>Cups of coffee drunk</Typography>
+      </Grid>
+      <Grid item xs={3} md={2} style={{ textAlign: 'center' }}>
+        <Typography variant="h3" color="secondary" gutterBottom sx={{ fontWeight: 'bold' }}><CountUp start={0} end={19} duration={2} />+</Typography>
+        <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>Projects completed</Typography>
+      </Grid>
+      <Grid item xs={3} md={2} style={{ textAlign: 'center' }}>
+        <Typography variant="h3" color="secondary" gutterBottom sx={{ fontWeight: 'bold' }}><CountUp start={0} end={5} duration={2} />+</Typography>
+        <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>Years of experience</Typography>
+      </Grid>
+    </Grid>
+  );
+};
+
 const About = () => {
 
   const downloadResume = () => {
@@ -225,10 +249,10 @@ const About = () => {
 
   return (
     <>
-    {/* <Paper elevation={3} sx={{ padding: "15px"}}> */}
       <AboutMe downloadResume={downloadResume} />
       <Skills/>
-    {/* </Paper> */}
+      <Divider />
+      <AnimatedCounter />
     </>
   )
 };

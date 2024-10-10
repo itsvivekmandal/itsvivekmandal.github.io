@@ -1,6 +1,5 @@
 import { Grid, Typography, TextField, InputAdornment, IconButton } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
-import emailjs from '@emailjs/browser';
 import { useState } from "react";
 
 const Contact = () => {
@@ -12,18 +11,7 @@ const Contact = () => {
       message: message,
     };
 
-    emailjs
-      .sendForm('service_un4yhlp', 'template_2k7hukh', templateParams, {
-        publicKey: 'JcofCbTzD5TK6QpPp',
-      })
-    .then(
-      (result) => {
-        console.log('Message sent successfully.', result.text);
-      },
-      (error) => {
-        console.log('Failed to send message.', error.text);
-      }
-    );
+    
   };
 
   return (
