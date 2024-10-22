@@ -32,12 +32,14 @@ const Contact = () => {
 
     if (!response.ok) {
       setSeverity('error');
+      setMailStatus('Failed to send mail!');
     } else {
       setSeverity('success');
+      setMailStatus('Mail sent successfully.');
     }
 
-    const jsonResponse = await response.json();
-    setMailStatus(jsonResponse.message);
+    // const jsonResponse = await response.json();
+    // setMailStatus(jsonResponse.message);
     setOpen(true);
     //clear the input field
     setMessage('');
