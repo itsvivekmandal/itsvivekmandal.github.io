@@ -22,20 +22,26 @@ const Contact = () => {
       message: message,
     };
 
-    const response = await fetch('http://127.0.0.1:8080/send_email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(templateParams),
-    });
+    try {
 
-    if (!response.ok) {
+      const response = await fetch('http://127.0.0.1:8080/send_email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(templateParams),
+      });
+      
+      if (!response.ok) {
+        setSeverity('error');
+        setMailStatus('Failed to send mail!');
+      } else {
+        setSeverity('success');
+        setMailStatus('Mail sent successfully.');
+      }
+    } catch (erro) {
       setSeverity('error');
       setMailStatus('Failed to send mail!');
-    } else {
-      setSeverity('success');
-      setMailStatus('Mail sent successfully.');
     }
 
     // const jsonResponse = await response.json();
