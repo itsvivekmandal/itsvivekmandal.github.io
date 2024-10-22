@@ -39,7 +39,7 @@ const Contact = () => {
         setSeverity('success');
         setMailStatus('Mail sent successfully.');
       }
-    } catch (erro) {
+    } catch (error) {
       setSeverity('error');
       setMailStatus('Failed to send mail!');
     }
