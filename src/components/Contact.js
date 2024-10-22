@@ -1,17 +1,50 @@
 import { Grid, Typography, TextField, InputAdornment, IconButton } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import { useState } from "react";
+import { Snackbar, Slide, Alert } from '@mui/material';
+
+function SlideTransition(props) {
+  return <Slide {...props} direction="left" />; 
+}
 
 const Contact = () => {
-
   const [message, setMessage] = useState('');
 
-  const handleSendClick = () => {
+  const [open, setOpen] = useState(false);
+  const [severity, setSeverity] = useState('warning');
+  const [mailStatus, setMailStatus] = useState(null);
+
+  const vertical = 'bottom';
+  const horizontal = 'right'; 
+
+  const handleClick = async () => {
     const templateParams = {
       message: message,
     };
 
-    
+    const response = await fetch('http://127.0.0.1:8080/send_email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(templateParams),
+    });
+
+    if (!response.ok) {
+      setSeverity('error');
+    } else {
+      setSeverity('success');
+    }
+
+    const jsonResponse = await response.json();
+    setMailStatus(jsonResponse.message);
+    setOpen(true);
+    //clear the input field
+    setMessage('');
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
 
   return (
@@ -43,25 +76,32 @@ const Contact = () => {
             multiline 
             maxRows={4} 
             fullWidth
+            value={message}
             onChange={(e) => setMessage(e.target.value)}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
-                  <IconButton color="secondary" onClick={handleSendClick}>
+                  <IconButton color="secondary" onClick={handleClick}>
                     <SendIcon />
                   </IconButton>
                 </InputAdornment>
               ),
             }}
-            // sx={{
-            //   '& .MuiInputBase-root': {
-            //     height: '100%',  // Set the height here
-            //   },
-            //   '& .MuiInputBase-input': {
-            //     fontSize: '1.2rem',  // Increase the font size
-            //   },
-            // }}
           />
+          <Snackbar
+            anchorOrigin={{ vertical, horizontal }}
+            open={open}
+            autoHideDuration={5000}
+            TransitionComponent={SlideTransition}
+            onClose={handleClose}
+            message={message}
+            severity="success"
+            key={vertical + horizontal}
+          >
+            <Alert onClose={handleClose} severity={severity} sx={{ width: '100%' }}>
+              {mailStatus}
+            </Alert>
+          </Snackbar>
       </Grid>
     </Grid>
   )
