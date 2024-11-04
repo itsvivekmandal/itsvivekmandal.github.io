@@ -23,11 +23,16 @@ const Contact = () => {
       message: message,
     };
 
-    const result = await apiService.sendMail(templateParams);
-    if(result.status === 200) setSeverity('success');
-    else setSeverity('error');
-
-    setMailStatus(result.data.message);
+    try {      
+      const result = await apiService.sendMail(templateParams);
+      if(result.status === 200) setSeverity('success');
+      else setSeverity('error');
+  
+      setMailStatus(result.data.message);
+    } catch (error) {
+      setSeverity('error');
+      setMailStatus('Failed to send mail!');
+    }
 
     // try {
 
