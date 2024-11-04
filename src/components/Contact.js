@@ -1,3 +1,4 @@
+import apiService from "../api/apiService";
 import { Grid, Typography, TextField, InputAdornment, IconButton } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import { useState } from "react";
@@ -22,30 +23,35 @@ const Contact = () => {
       message: message,
     };
 
-    try {
+    const result = await apiService.sendMail(templateParams);
+    if(result.status === 200) setSeverity('success');
+    else setSeverity('error');
 
-      const response = await fetch('http://127.0.0.1:8080/send_email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(templateParams),
-      });
+    setMailStatus(result.data.message);
+
+    // try {
+
+      // const response = await fetch('http://127.0.0.1:8080/send_email', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(templateParams),
+      // });
       
-      if (!response.ok) {
-        setSeverity('error');
-        setMailStatus('Failed to send mail!');
-      } else {
-        setSeverity('success');
-        setMailStatus('Mail sent successfully.');
-      }
-    } catch (error) {
-      setSeverity('error');
-      setMailStatus('Failed to send mail!');
-    }
+      // if (!response.ok) {
+      //   setSeverity('error');
+      //   setMailStatus('Failed to send mail!');
+      // } else {
+      //   setSeverity('success');
+      //   setMailStatus('Mail sent successfully.');
+      // }
 
-    // const jsonResponse = await response.json();
-    // setMailStatus(jsonResponse.message);
+    // } catch (error) {
+    //   setSeverity('error');
+    //   setMailStatus('Failed to send mail!');
+    // }
+
     setOpen(true);
     //clear the input field
     setMessage('');
@@ -99,14 +105,22 @@ const Contact = () => {
           <Snackbar
             anchorOrigin={{ vertical, horizontal }}
             open={open}
-            autoHideDuration={5000}
+            autoHideDuration={3000}
             TransitionComponent={SlideTransition}
             onClose={handleClose}
             message={message}
             severity="success"
             key={vertical + horizontal}
           >
-            <Alert onClose={handleClose} severity={severity} sx={{ width: '100%' }}>
+            <Alert onClose={handleClose} severity={severity} 
+              sx={{ 
+                width: '100%', 
+                fontSize: '18px',
+                height: '50px',
+                display: 'flex',
+                alignItems: 'center'
+              }}
+            >
               {mailStatus}
             </Alert>
           </Snackbar>
