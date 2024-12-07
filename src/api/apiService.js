@@ -12,7 +12,18 @@ const apiService = {
       console.error("Error posting data", error);
       return error.response;
     }
+  },
+  portfolioInfo: async() => {
+    try {
+      const response = await axios.get(`${API_BASE_URL}/portfolio_info`);
+      // console.log(response.data.progressInfo);
+      return response;
+    } catch (error) {
+      // console.error("Error posting data", error);
+      return false;
+    }
   }
+
 };
 
 export default apiService;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Paper, Typography } from '@mui/material';
+import Heading from './Heading';
 
 
 const projectList = [
@@ -51,12 +52,17 @@ const ProjectsPaper = ({ project }) => {
         rel="noopener noreferrer" 
         style={{ textDecoration: 'none', color: 'inherit' }}
       >
-        <Paper 
-          style={{
+        <Paper elevation={8}
+          sx={{
             padding: '20px', 
             textAlign: 'center',
             color: '#333', 
             // height: '200px' // adjust as needed
+            transition: 'box-shadow 0.5s ease', // Smooth transition
+            "&:hover": {
+              // opacity: 0.5,
+              boxShadow: '0px 12px 24px rgba(0, 0, 0, 0.5)',
+            },
           }}
         >
           <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>{name}</Typography>
@@ -81,26 +87,8 @@ const ProjectsPaper = ({ project }) => {
 const Projects = () => {
   return (
     <>
-      <Typography variant="h4" gutterBottom
-        sx={{
-          position: 'relative',
-          display: 'inline-block',
-          marginTop: '16px',
-          marginBottom: '16px',
-          '&::after': {
-            content: '""',
-            position: 'absolute',
-            left: 0,
-            bottom: 0,
-            height: '2px',
-            width: '100%',
-            backgroundColor: "#9c27b0",
-          },
-        }}
-      >
-        Projects
-      </Typography>
-      <Grid container spacing={3} style={{ padding: '20px' }}>
+      <Heading name="Projects" />
+      <Grid container spacing={3} style={{ padding: '20px' }} justifyContent="center">
       {
         projectList.map((project, index) => (
           <ProjectsPaper key={index} project={project} />

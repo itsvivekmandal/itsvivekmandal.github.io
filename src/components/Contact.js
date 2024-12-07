@@ -3,6 +3,7 @@ import { Grid, Typography, TextField, InputAdornment, IconButton } from "@mui/ma
 import SendIcon from '@mui/icons-material/Send';
 import { useState } from "react";
 import { Snackbar, Slide, Alert } from '@mui/material';
+import Heading from './Heading';
 
 function SlideTransition(props) {
   return <Slide {...props} direction="left" />; 
@@ -69,25 +70,7 @@ const Contact = () => {
   return (
     <Grid container spacing={3} justifyContent="center">
       <Grid item xs={12} md={6}>
-        <Typography variant="h4" gutterBottom
-            sx={{
-              position: 'relative',
-              display: 'inline-block',
-              marginTop: '16px',
-              marginBottom: '16px',
-              '&::after': {
-                content: '""',
-                position: 'absolute',
-                left: 0,
-                bottom: 0,
-                height: '2px',
-                width: '100%',
-                backgroundColor: "#9c27b0",
-              },
-            }}
-          >
-            Contact Me
-          </Typography>
+          <Heading name="Contact Me" />
           <TextField 
             label="Write a message for me" 
             color="secondary" 

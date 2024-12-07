@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Grid, Typography, Button, Link, Stack, Divider } from "@mui/material";
 import CountUp from "react-countup";
 import Avatar from "@mui/material/Avatar";
@@ -19,29 +19,14 @@ import mysql from "../assets/images/mysql.svg";
 import react from "../assets/images/react.svg";
 import git from "../assets/images/git.svg";
 import bootstrap from "../assets/images/bootstrap.png";
+import {LineChart} from "@mui/x-charts/LineChart";
+import Heading from "./Heading";
+import apiService from "../api/apiService";
 
 const AboutMe = ({downloadResume}) => {
   return (
     <>
-      <Typography variant="h4" gutterBottom
-          sx={{
-            position: 'relative',
-            display: 'inline-block',
-            marginTop: '20px',
-            marginBottom: '20px',
-            '&::after': {
-              content: '""',
-              position: 'absolute',
-              left: 0,
-              bottom: 0,
-              height: '2px',
-              width: '100%',
-              backgroundColor: "#9c27b0",
-            },
-          }}
-        >
-          About Me  
-      </Typography>
+      <Heading name="About Me" />
       <Stack
         direction={{ xs: "column", md: "row" }}
         spacing={4} // Space between elements
@@ -149,25 +134,7 @@ const Skills = () => {
   
   return (
     <>
-      <Typography variant="h4" gutterBottom
-          sx={{
-            position: 'relative',
-            display: 'inline-block',
-            marginTop: '30px',
-            marginBottom: '30px',
-            '&::after': {
-              content: '""',
-              position: 'absolute',
-              left: 0,
-              bottom: 0,
-              height: '2px',
-              width: '100%',
-              backgroundColor: "#9c27b0",
-            },
-          }}
-        >
-          Skills  
-      </Typography>
+      <Heading name="Skills" />
       <Stack
         direction={{ xs: "column", md: "row" }}
         spacing={4} // Space between elements
@@ -213,6 +180,47 @@ const Skills = () => {
   );
 };
 
+const Progress = () => {
+
+  const [chartData, setChartData] = useState(null);
+
+  useEffect(() => {
+    const getData = async () => {
+      const result = await apiService.portfolioInfo();
+      if (result) {
+        setChartData(result.data.progressInfo);
+      }
+    };
+    getData();
+  }, []);
+  
+  return (
+    <>
+    {
+      chartData ? (
+        <Grid container direction="column"  justifyContent="center" alignItems="center">
+          <Grid><Heading name="Life Time Progress" /></Grid>
+          <Grid sx={{width: { xs: "100%", md: "80%" }}}>
+            <LineChart
+              xAxis={[{scaleType: 'band', data: chartData.xAxis }]}
+              series={[
+                {
+                  data: chartData.series,
+                  area: true
+                },
+              ]}
+              height={400}
+            />
+          </Grid>
+        </Grid>
+      ):(
+        <div>Loading...</div>
+      )
+    }
+    </>
+  );
+};
+
 const AnimatedCounter = () => {
   return (
     <Grid container spacing={4} style={{ padding: '20px' }} justifyContent="center">
@@ -251,6 +259,7 @@ const About = () => {
     <>
       <AboutMe downloadResume={downloadResume} />
       <Skills/>
+      <Progress />
       <Divider />
       <AnimatedCounter />
     </>
