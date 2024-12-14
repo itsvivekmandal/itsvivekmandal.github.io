@@ -45,7 +45,7 @@ const Body = () => {
           <Projects />
         </section>
       </Grid>
-      <Grid item xs={12} md={12}>
+      <Grid item xs={12} md={12} style={{ padding: '20px 15px' }}>
         <Testimonials />
       </Grid>
       <Grid item xs={12} md={12}>

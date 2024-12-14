@@ -209,7 +209,7 @@ const Progress = () => {
                   area: true
                 },
               ]}
-              height={400}
+              height="300"
             />
           </Grid>
         </Grid>

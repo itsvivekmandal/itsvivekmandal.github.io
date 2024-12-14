@@ -50,7 +50,7 @@ const Testimonials = () => {
                     <Typography variant='body1' color={"text.secondary"}>{quote.role}</Typography>
                   </Grid>
                   <Grid xs="12" md="8">
-                    <Typography variant='h4' color={"text.secondary"} sx={{padding: '20px'}}>
+                    <Typography color={"text.secondary"} sx={{padding: '20px', fontSize: {xs: '1.5rem', md: '2rem'}}}>
                     &#8220; {quote.statement} &#8221;
                     </Typography>
                   </Grid>
