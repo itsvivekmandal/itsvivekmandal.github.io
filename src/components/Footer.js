@@ -1,4 +1,4 @@
-import india from "../assets/images/india.jpg";
+import india from "../assets/images/india.png";
 import { Grid, Typography, useMediaQuery, useTheme} from '@mui/material';
 
 const Footer = () => {
@@ -23,10 +23,11 @@ const Footer = () => {
         </Typography>
         <img src={india} alt="know_india"
           style={{
-            width: isSmallScreen ? '100%' : '40%', // 100% on small screens, 40% on larger
+            // width: isSmallScreen ? '100%' : '40%', // 100% on small screens, 40% on larger
+            maxWidth: '100%'
           }}
         />
-        <Typography component="p" sx={{ fontWeight: 'bold', color: '#848484'}}>No &copy; copyright issues - {new Date().getFullYear()}</Typography>
+        <Typography variant="body2" color={"text.secondary"}>No &copy; copyright issues - {new Date().getFullYear()}</Typography>
       </Grid>
     </Grid>
   );
