@@ -5,6 +5,7 @@ import Home from './Home';
 import Projects from "./Projects";
 import About from "./About";
 import Contact from "./Contact";
+import Testimonials from './Testimonials';
 
 const Body = () => {
   const { sectionId } = useParams();  // Extract sectionId from the route
@@ -43,6 +44,9 @@ const Body = () => {
         <section ref={projectsRef} id="projects" style={{ padding: '20px 15px' }}>
           <Projects />
         </section>
+      </Grid>
+      <Grid item xs={12} md={12}>
+        <Testimonials />
       </Grid>
       <Grid item xs={12} md={12}>
         <section ref={contactRef} id="contact" style={{ padding: '20px 15px' }}>
