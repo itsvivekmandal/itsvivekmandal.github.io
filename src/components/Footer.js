@@ -19,7 +19,7 @@ const Footer = () => {
           Vivek Mandal
         </Typography>
         <Typography component="p" sx={{color: '#848484'}}>
-          Coded with ❤️ using React in India 🇮🇳
+          Coded with ❤️ using React in India
         </Typography>
         <img src={india} alt="know_india"
           style={{
