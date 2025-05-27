@@ -60,9 +60,9 @@
 
 .overlay-image {
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 5%;
-  max-width: 20%;
+  max-width: 10%;
   height: auto;
   z-index: 10;
   animation: float-plane 25s linear infinite;
@@ -88,10 +88,10 @@
 
 @media (max-width: 768px) {
   .overlay-image {
-    /* max-width: 30%; */
+    max-width: 15%;
     /* bottom: 20%; */
-    right: 5%;
-    top: 5%
+    right: 95%;
+    top: 15%
   }
 
   .logo {
@@ -101,9 +101,10 @@
 
 @media (max-width: 480px) {
   .overlay-image {
+    max-width: 15%;
     bottom: 40%;
     right: 5%;
-    top: 1%;
+    top: 5%;
   }
 
   .logo {

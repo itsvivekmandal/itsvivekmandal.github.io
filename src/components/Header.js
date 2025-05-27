@@ -30,7 +30,7 @@ const Header = () => {
       <Toolbar>
         <Grid container spacing={2} alignItems="center">
           {/* Logo for md screen */}
-          <Grid item xs={10} md={2} sx={{ display: "center" }}>
+          <Grid item xs={10} md={2} sx={{ display: {md: "center", xs: 'flex'} }}>
             <img className="logo" src={logo} alt="logo" />
           </Grid>
           {/* Menu for md screen */}

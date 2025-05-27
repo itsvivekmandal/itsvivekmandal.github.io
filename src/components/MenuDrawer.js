@@ -2,7 +2,7 @@ import {useState} from "react";
 import { Drawer, List, Tabs, Tab, styled, Grid } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo-gif-unscreen.gif";
 
 const CustomTab = styled(Tab)(({ theme }) => ({
   fontSize: '14px',
@@ -34,7 +34,7 @@ const MenuDrawer = ({handleClick, path}) => {
         sx={{ '& .MuiDrawer-paper': { width: '50%' } }}  
       >
         <Grid container alignItems="center">
-          <Grid item xs={12} container justifyContent="center" alignItems="center">
+          <Grid item xs={12} container justifyContent="center" alignItems="center" sx={{ display: "center"}}>
             <img className="logo" src={logo} alt="logo" onClick={toggleDrawer} />
           </Grid>
           <Grid item xs={12} container justifyContent="flex-start">
