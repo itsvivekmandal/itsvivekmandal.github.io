@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.9a933733.css",
-    "main.js": "/static/js/main.b88dab6f.js",
+    "main.js": "/static/js/main.768d6b04.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
-    "static/media/logo-gif-unscreen.gif": "/static/media/logo-gif-unscreen.d6f33a3c1dba4e32dfc0.gif",
+    "static/media/logo-gif-unscreen.gif": "/static/media/logo-gif-unscreen.d500f048f73d757a8286.gif",
     "static/media/plane_1.gif": "/static/media/plane_1.d9c22181cd5f990e4748.gif",
     "static/media/steve_jobs.jpg": "/static/media/steve_jobs.fac1de9eb5a1572cf985.jpg",
     "static/media/profile.jpg": "/static/media/profile.f5aa6081fcd8b91d9d16.jpg",
@@ -29,11 +29,11 @@
     "index.html": "/index.html",
     "static/media/html.svg": "/static/media/html.2b2e078a005e3b67d05cd71b6b2b0f7f.svg",
     "main.9a933733.css.map": "/static/css/main.9a933733.css.map",
-    "main.b88dab6f.js.map": "/static/js/main.b88dab6f.js.map",
+    "main.768d6b04.js.map": "/static/js/main.768d6b04.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9a933733.css",
-    "static/js/main.b88dab6f.js"
+    "static/js/main.768d6b04.js"
   ]
 }
