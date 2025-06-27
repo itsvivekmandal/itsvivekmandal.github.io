@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.9a933733.css",
-    "main.js": "/static/js/main.768d6b04.js",
+    "main.js": "/static/js/main.d505e0ef.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
-    "static/media/logo-gif-unscreen.gif": "/static/media/logo-gif-unscreen.d500f048f73d757a8286.gif",
     "static/media/plane_1.gif": "/static/media/plane_1.d9c22181cd5f990e4748.gif",
     "static/media/steve_jobs.jpg": "/static/media/steve_jobs.fac1de9eb5a1572cf985.jpg",
     "static/media/profile.jpg": "/static/media/profile.f5aa6081fcd8b91d9d16.jpg",
     "static/media/mongo.png": "/static/media/mongo.26cea863f7eb0dc9f80c.png",
     "static/media/india.png": "/static/media/india.54ad272e71ad8e71ec18.png",
     "static/media/bootstrap.png": "/static/media/bootstrap.cb0fcc269e8250f3551b.png",
+    "static/media/logo.png": "/static/media/logo.bc91537157780ef3f3a2.png",
     "static/media/resume.pdf": "/static/media/resume.d16f3f87ef39fe74d89e.pdf",
     "static/media/leetcode.png": "/static/media/leetcode.c78fc082f2b4c496259f.png",
     "static/media/munsi_premchand.png": "/static/media/munsi_premchand.9242500565f0575101eb.png",
@@ -29,11 +29,11 @@
     "index.html": "/index.html",
     "static/media/html.svg": "/static/media/html.2b2e078a005e3b67d05cd71b6b2b0f7f.svg",
     "main.9a933733.css.map": "/static/css/main.9a933733.css.map",
-    "main.768d6b04.js.map": "/static/js/main.768d6b04.js.map",
+    "main.d505e0ef.js.map": "/static/js/main.d505e0ef.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9a933733.css",
-    "static/js/main.768d6b04.js"
+    "static/js/main.d505e0ef.js"
   ]
 }
