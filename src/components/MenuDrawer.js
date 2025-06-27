@@ -2,7 +2,7 @@ import {useState} from "react";
 import { Drawer, List, Tabs, Tab, styled, Grid } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from "../assets/images/logo-gif-unscreen.gif";
+import logo from "../assets/images/logo.png";
 
 const CustomTab = styled(Tab)(({ theme }) => ({
   fontSize: '14px',
