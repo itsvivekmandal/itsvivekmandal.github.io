@@ -13,7 +13,7 @@ const Footer = () => {
             sx={{
               fontFamily: '"Dancing Script", cursive',
               fontSize: '3rem',
-              color: '#9c27b0'
+              color: 'secondary.main'
             }}
           >
           Vivek Mandal

@@ -56,7 +56,7 @@ const ProjectsPaper = ({ project }) => {
           sx={{
             padding: '20px', 
             textAlign: 'center',
-            color: '#333', 
+            // color: '#333', 
             // height: '200px' // adjust as needed
             transition: 'box-shadow 0.5s ease', // Smooth transition
             "&:hover": {

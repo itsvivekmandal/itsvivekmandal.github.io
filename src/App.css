@@ -39,7 +39,7 @@
 
 /* logo style */
 .logo {
-  width:40%;
+  width:50%;
 }
 
 .banner {
@@ -96,6 +96,7 @@
 
   .logo {
     width:20%;
+    padding-left: 15px;
   }
 }
 
@@ -108,7 +109,8 @@
   }
 
   .logo {
-    width:30%;
+    width:40%;
+    padding-left: 15px;
   }
 }
 

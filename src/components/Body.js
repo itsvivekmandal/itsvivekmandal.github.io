@@ -6,6 +6,7 @@ import Projects from "./Projects";
 import About from "./About";
 import Contact from "./Contact";
 import Testimonials from './Testimonials';
+import { useTheme } from '@mui/material/styles';
 
 const Body = () => {
   const { sectionId } = useParams();  // Extract sectionId from the route
@@ -13,6 +14,7 @@ const Body = () => {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+  const theme = useTheme();
 
   useEffect(() => {
     // Check if sectionId exists and match it to the correct section
