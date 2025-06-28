@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b227bc15.css",
-    "main.js": "/static/js/main.0a4f5e70.js",
+    "main.js": "/static/js/main.ed089f50.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/plane_1.gif": "/static/media/plane_1.d9c22181cd5f990e4748.gif",
     "static/media/steve_jobs.jpg": "/static/media/steve_jobs.fac1de9eb5a1572cf985.jpg",
@@ -29,11 +29,11 @@
     "index.html": "/index.html",
     "static/media/html.svg": "/static/media/html.2b2e078a005e3b67d05cd71b6b2b0f7f.svg",
     "main.b227bc15.css.map": "/static/css/main.b227bc15.css.map",
-    "main.0a4f5e70.js.map": "/static/js/main.0a4f5e70.js.map",
+    "main.ed089f50.js.map": "/static/js/main.ed089f50.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b227bc15.css",
-    "static/js/main.0a4f5e70.js"
+    "static/js/main.ed089f50.js"
   ]
 }
