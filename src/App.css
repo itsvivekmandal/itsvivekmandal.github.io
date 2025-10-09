@@ -39,7 +39,7 @@
 
 /* logo style */
 .logo {
-  width:50%;
+  width: 100%;
 }
 
 .banner {
@@ -86,6 +86,20 @@
   }
 }
 
+@media (max-width: 820px) {
+  .overlay-image {
+    max-width: 15%;
+    /* bottom: 20%; */
+    right: 95%;
+    top: 25%
+  }
+
+  .logo {
+    width: 70%;
+    padding: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .overlay-image {
     max-width: 15%;
@@ -95,8 +109,8 @@
   }
 
   .logo {
-    width:20%;
-    padding-left: 15px;
+    width: 60%;
+    padding: 15px;
   }
 }
 
@@ -109,8 +123,8 @@
   }
 
   .logo {
-    width:40%;
-    padding-left: 15px;
+    width:100%;
+    padding: 15px;
   }
 }
 
