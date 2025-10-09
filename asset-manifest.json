@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a39f2c3.css",
-    "main.js": "/static/js/main.cd7fc641.js",
+    "main.css": "/static/css/main.5fba026a.css",
+    "main.js": "/static/js/main.2fcfdc85.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/plane_1.gif": "/static/media/plane_1.d9c22181cd5f990e4748.gif",
     "static/media/steve_jobs.jpg": "/static/media/steve_jobs.fac1de9eb5a1572cf985.jpg",
     "static/media/profile.jpg": "/static/media/profile.f5aa6081fcd8b91d9d16.jpg",
     "static/media/mongo.png": "/static/media/mongo.26cea863f7eb0dc9f80c.png",
-    "static/media/logo.png": "/static/media/logo.70c2b3903b0f8a8a8df2.png",
     "static/media/india.png": "/static/media/india.54ad272e71ad8e71ec18.png",
     "static/media/bootstrap.png": "/static/media/bootstrap.cb0fcc269e8250f3551b.png",
+    "static/media/logo.png": "/static/media/logo.12e6c69b8bf33a5139f2.png",
     "static/media/resume.pdf": "/static/media/resume.d16f3f87ef39fe74d89e.pdf",
     "static/media/leetcode.png": "/static/media/leetcode.c78fc082f2b4c496259f.png",
     "static/media/munsi_premchand.png": "/static/media/munsi_premchand.9242500565f0575101eb.png",
@@ -28,12 +28,12 @@
     "static/media/javascript.svg": "/static/media/javascript.90384b2de06d28553533ed9bb6d606bf.svg",
     "index.html": "/index.html",
     "static/media/html.svg": "/static/media/html.2b2e078a005e3b67d05cd71b6b2b0f7f.svg",
-    "main.6a39f2c3.css.map": "/static/css/main.6a39f2c3.css.map",
-    "main.cd7fc641.js.map": "/static/js/main.cd7fc641.js.map",
+    "main.5fba026a.css.map": "/static/css/main.5fba026a.css.map",
+    "main.2fcfdc85.js.map": "/static/js/main.2fcfdc85.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a39f2c3.css",
-    "static/js/main.cd7fc641.js"
+    "static/css/main.5fba026a.css",
+    "static/js/main.2fcfdc85.js"
   ]
 }
