@@ -52,7 +52,7 @@ const Home = () => {
           <Box sx={{ fontWeight: 'bold' }}>
             <TypewriterComponent
               options={{
-                strings: ['a proud Indian.', 'a software engineer.', 'a web developer.', 'a programmer.', 'Mr. Zero.', 'Nobody.'],
+                strings: ['a proud Indian.', 'a software engineer.', 'a cool stack developer.', 'a programmer.', 'Mr. Zero.', 'Nobody.'],
                 autoStart: true,
                 loop: true,
                 deleteSpeed: 30
