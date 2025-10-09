@@ -40,7 +40,7 @@ const getTheme = (mode = 'light') =>
               main: '#1976d2',
             },
             secondary: {
-              main: '#7952B3',
+              main: '#257943',
             },
             background: {
               default: '#f5f5f5',
@@ -57,7 +57,7 @@ const getTheme = (mode = 'light') =>
               main: '#90caf9',
             },
             secondary: {
-              main: '#7952B3',
+              main: '#257943',
             },
             background: {
               default: '#1d1d1d',
