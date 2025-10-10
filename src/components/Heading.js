@@ -8,7 +8,7 @@ const Heading = ({name}) => {
     <Typography 
       gutterBottom
       variant="h4"
-      sx={{textDecoration: "underline", textDecorationColor: theme.palette.secondary.main, textUnderlineOffset: "10px"}}
+      sx={{textDecoration: "underline", textDecorationColor: theme.palette.primary.main, textUnderlineOffset: "10px"}}
       padding={"15px 20px"}
     >
       {name}  

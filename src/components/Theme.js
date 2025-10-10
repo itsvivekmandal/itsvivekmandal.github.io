@@ -1,33 +1,4 @@
-// theme.js or theme.ts
 import { createTheme } from '@mui/material/styles';
-
-// const Theme = createTheme({
-//   palette: {
-//     secondary: {
-//       main: '#7952B3', // your custom secondary color
-//       contrastText: '#ffffff', // optional
-//     },
-//     // mode: 'dark', // Enable dark mode
-//     background: {
-//       default: '##1d1d1d', // Dark background for the whole app
-//       paper: '#1e1e1e',    // Slightly lighter background for surfaces
-//     },
-//   },
-//   components: {
-//     MuiCssBaseline: {
-//       styleOverrides: {
-//         body: {
-//           backgroundColor: '##1d1d1d', // fallback if theme ref fails
-//           margin: 0,
-//           padding: 0,
-//         },
-//         html: {
-//           backgroundColor: '##1d1d1d',
-//         },
-//       },
-//     },
-//   },
-// });
 
 const getTheme = (mode = 'light') =>
   createTheme({
@@ -35,56 +6,72 @@ const getTheme = (mode = 'light') =>
       mode,
       ...(mode === 'light'
         ? {
-            // Light mode palette
+            // 🌞 Light mode palette
             primary: {
-              main: '#1976d2',
+              main: '#257943', // brand green
+              contrastText: '#ffffff',
             },
             secondary: {
-              main: '#257943',
+              main: '#257943', // slightly lighter green for accents
+              contrastText: '#ffffff',
             },
             background: {
-              default: '#f5f5f5',
-              paper: '#ffffff',
+              default: '#f3f6f4', // soft gray-green tone
+              paper: '#ffffff',   // clean white cards
             },
             text: {
-              primary: '#666666',
-              secondary: '#555555',
+              primary: '#2b2b2b', // near-black for strong contrast
+              secondary: '#4a4a4a', // softer gray for supporting text
             },
           }
         : {
-            // Dark mode palette
+            // 🌙 Dark mode palette
             primary: {
-              main: '#90caf9',
+              main: '#257943', // slightly brighter green for dark bg
+              contrastText: '#ffffff',
             },
             secondary: {
-              main: '#257943',
+              main: '#257943', // pastel green accent
+              contrastText: '#1d1d1d',
             },
             background: {
-              default: '#1d1d1d',
-              paper: '#1e1e1e',
+              default: '#121212', // true dark background
+              paper: '#1E1E1E', // slightly lifted card background
             },
             text: {
-              primary: '#d8d8d8',
-              secondary: '#5e5e5e',
+              primary: '#e5e5e5', // almost white
+              secondary: '#bdbdbd', // light gray for secondary text
             },
           }),
     },
+
     typography: {
       fontFamily: 'Roboto, Arial, sans-serif',
     },
+
     components: {
       MuiCssBaseline: {
         styleOverrides: {
           body: {
             margin: 0,
             padding: 0,
-            backgroundColor: mode === 'dark' ? '#1d1d1d' : '#f5f5f5',
-            color: mode === 'dark' ? '#e2e2e2' : '#3d3d3d',
+            backgroundColor: mode === 'dark' ? '#121212' : '#f3f6f4',
+            color: mode === 'dark' ? '#e5e5e5' : '#2b2b2b',
+            transition: 'background-color 0.3s ease, color 0.3s ease',
+          },
+        },
+      },
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            borderRadius: 8,
+            fontWeight: 500,
           },
         },
       },
     },
   });
+
 
 
 export default getTheme;

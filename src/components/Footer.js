@@ -13,12 +13,12 @@ const Footer = () => {
             sx={{
               fontFamily: '"Dancing Script", cursive',
               fontSize: '3rem',
-              color: 'secondary.main'
+              color: 'primary.main'
             }}
           >
           Vivek Mandal
         </Typography>
-        <Typography component="p" sx={{color: '#848484'}}>
+        <Typography component="p" sx={{color: 'text.primary'}}>
           Coded with ❤️ using React in India
         </Typography>
         <img src={india} alt="know_india"
@@ -27,7 +27,7 @@ const Footer = () => {
             maxWidth: '100%'
           }}
         />
-        <Typography variant="body2" color={"text.secondary"}>No &copy; copyright issues - {new Date().getFullYear()}</Typography>
+        <Typography variant="body2" color={"text.primary"}>No &copy; copyright issues - {new Date().getFullYear()}</Typography>
       </Grid>
     </Grid>
   );

@@ -98,7 +98,7 @@ const AboutMe = ({downloadResume}) => {
           </Stack> */}
           <Button
             variant="contained"
-            color="secondary"
+            color="primary"
             size="large"
             onClick={downloadResume}
             sx={{ alignSelf: { xs: "center", md: "flex-start" }}} // Center button on mobile, left on larger screens
@@ -117,12 +117,12 @@ const Skills = () => {
   const barChartsProps = {
     series: [
       {
-        data: [5, 4.5, 8, 7, 8, 4],
+        data: [5, 4.5, 8, 7, 8, 4, 5],
         id: 'sync',
         highlightScope: { highlight: 'item', fade: 'global' },
       },
     ],
-    xAxis: [{ scaleType: 'band', data: ['Node', 'React', 'PHP', 'JavaScript', 'Sql', 'Mongo'] }],
+    xAxis: [{ scaleType: 'band', data: ['Node', 'React', 'PHP', 'JavaScript', 'Sql', 'Mongo', 'Docker'] }],
     yAxis: [{max: 10}],
     height: 400,
     slotProps: {
@@ -225,19 +225,19 @@ const AnimatedCounter = () => {
   return (
     <Grid container spacing={4} style={{ padding: '20px' }} justifyContent="center">
       <Grid item xs={12} md={2} style={{ textAlign: 'center' }}>
-        <Typography variant="h3" color="secondary"><CountUp start={0} end={150000} duration={4.5} />+</Typography>
+        <Typography variant="h3" color="primary"><CountUp start={0} end={150000} duration={4.5} />+</Typography>
         <Typography variant="h6" gutterBottom>Lines of code</Typography>
       </Grid>
       <Grid item xs={12} md={2} style={{ textAlign: 'center' }}>
-        <Typography variant="h3" color="secondary"><CountUp start={0} end={1000} duration={4.5} />+</Typography>
+        <Typography variant="h3" color="primary"><CountUp start={0} end={1000} duration={4.5} />+</Typography>
         <Typography variant="h6" gutterBottom>Cups of coffee drunk</Typography>
       </Grid>
       <Grid item xs={12} md={2} style={{ textAlign: 'center' }}>
-        <Typography variant="h3" color="secondary"><CountUp start={0} end={19} duration={4.5} />+</Typography>
+        <Typography variant="h3" color="primary"><CountUp start={0} end={19} duration={4.5} />+</Typography>
         <Typography variant="h6" gutterBottom>Projects completed</Typography>
       </Grid>
       <Grid item xs={12} md={2} style={{ textAlign: 'center' }}>
-        <Typography variant="h3" color="secondary"><CountUp start={0} end={5} duration={4.5} />+</Typography>
+        <Typography variant="h3" color="primary"><CountUp start={0} end={5} duration={4.5} />+</Typography>
         <Typography variant="h6" gutterBottom>Years of experience</Typography>
       </Grid>
     </Grid>

@@ -54,7 +54,7 @@ const MenuDrawer = ({handleClick, path}) => {
                 onChange={handleClick}
                 TabIndicatorProps={{ style: { left: 0 } }}
                 textColor="text.primary"
-                indicatorColor="secondary"
+                indicatorColor="primary"
               >
                 <CustomTab icon={<HomeIcon />} iconPosition="start" label="Home" value="/" onClick={toggleDrawer} />
                 <CustomTab icon={<InfoIcon />} iconPosition="start" label="About" value="/about" onClick={toggleDrawer} />

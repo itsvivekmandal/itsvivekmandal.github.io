@@ -73,7 +73,7 @@ const Contact = () => {
           <Heading name="Contact Me" />
           <TextField 
             label="Write a message for me" 
-            color="secondary" 
+            color="primary" 
             variant="standard" 
             multiline 
             maxRows={4} 
@@ -83,7 +83,7 @@ const Contact = () => {
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
-                  <IconButton color="secondary" onClick={handleClick}>
+                  <IconButton color="primary" onClick={handleClick}>
                     <SendIcon />
                   </IconButton>
                 </InputAdornment>

@@ -43,7 +43,7 @@ const Header = ({ mode, setMode }) => {
               value={path}
               onChange={handleClick}
               textColor="text.primary"
-              indicatorColor="secondary"
+              indicatorColor="primary"
             >
               {/* In-page scrolling */}
               <CustomTab label="Home" value="/" />

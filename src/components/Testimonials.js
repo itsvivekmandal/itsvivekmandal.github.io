@@ -44,10 +44,10 @@ const Testimonials = () => {
             {
               quotes.map((quote, index) => (
                 <Grid container justifyContent={"center"} alignItems={"center"}>
-                  <Grid xs="12" md="4" sx={{bgcolor: '#E8E8E8', padding: "25px 15px"}}>
+                  <Grid xs="12" md="4" sx={{bgcolor: "primary.main", padding: "25px 15px"}}>
                     <img src={quote.profle} alt={quote.author} style={{width: "150px", borderRadius: "50%"}}/>
-                    <Typography gutterTop variant='h5' color="secondary" sx={{paddingTop: '20px'}}>{quote.author}</Typography>
-                    <Typography variant='body1' color={"text.secondary"}>{quote.role}</Typography>
+                    <Typography gutterTop variant='h5' color="primary.contrastText" sx={{paddingTop: '20px'}}>{quote.author}</Typography>
+                    <Typography variant='body1' color={"primary.contrastText"}>{quote.role}</Typography>
                   </Grid>
                   <Grid xs="12" md="8">
                     <Typography color={"text.primary"} sx={{padding: '20px', fontSize: {xs: '1.5rem', md: '2rem'}}}>
