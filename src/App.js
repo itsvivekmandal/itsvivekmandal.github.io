@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useMemo } from 'react';
-import { Outlet, createBrowserRouter } from "react-router-dom";
+import { Outlet, createHashRouter } from "react-router-dom";
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -14,7 +14,7 @@ function App() {
   const [mode, setMode] = useState(storedMode);
   const theme = useMemo(() => getTheme(mode), [mode]);
   localStorage.setItem('themeMode', mode);
-  console.log(mode);
+
   const toggleTheme = () =>
   setMode((prev) => (prev === 'light' ? 'dark' : 'light'));
 
@@ -30,7 +30,7 @@ function App() {
   );
 }
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     'path': "/",
     'element': <App />,
@@ -43,14 +43,6 @@ const router = createBrowserRouter([
         'path': '/blog',
         'element': <Blog/>
       }
-      // {
-      //   'path': '/about',
-      //   'element': <About />
-      // },
-      // {
-      //   'path': '/contact',
-      //   'element': <Contact />
-      // }
     ]
   }
 // ], { basename: "/portfolio" });
