@@ -128,11 +128,26 @@
   }
 }
 
-/* .dancing-script-title {
-  font-family: "Dancing Script", cursive !important;
-  font-optical-sizing: auto;
-  font-weight: 400; // 400 to 700
-  font-style: normal;
-} */
+.float {
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
 
+/* Hover zoom */
+.float:hover {
+  transform: scale(1.2);
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-12px) translateX(4px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
 

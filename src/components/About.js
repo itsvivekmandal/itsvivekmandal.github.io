@@ -10,14 +10,23 @@ import stackoverflow from "../assets/images/stack.png";
 import mail from "../assets/images/mail.png";
 import resume from "../assets/resume/resume.pdf";
 import { BarChart } from '@mui/x-charts/BarChart';
-import node from "../assets/images/node.svg";
-import javascript from "../assets/images/javascript.svg";
-import php from "../assets/images/php.svg";
-import html from "../assets/images/html.svg";
-import mongodb from "../assets/images/mongo.png";
-import mysql from "../assets/images/mysql.svg";
-import react from "../assets/images/react.svg";
-import git from "../assets/images/git.svg";
+import node from "../assets/images/node.png";
+import javascript from "../assets/images/javascript.png";
+import php from "../assets/images/php.png";
+import html from "../assets/images/html.png";
+import mongodb from "../assets/images/mongodb.png";
+import docker from "../assets/images/docker.png";
+import mysql from "../assets/images/mysql.png";
+import react from "../assets/images/react.png";
+import git from "../assets/images/git.png";
+import laravel from "../assets/images/laravel.png";
+import css from "../assets/images/css.png";
+import tailwind from "../assets/images/tailwind.png";
+import next from "../assets/images/next.png";
+import typescript from "../assets/images/typescript.png";
+import express from "../assets/images/express.png";
+import postman from "../assets/images/postman.png";
+
 import bootstrap from "../assets/images/bootstrap.png";
 import {LineChart} from "@mui/x-charts/LineChart";
 import Heading from "./Heading";
@@ -115,22 +124,25 @@ const Skills = () => {
   const [highlightedItem, setHighLightedItem] = useState(null);
 
   const barChartsProps = {
-    series: [
-      {
-        data: [5, 4.5, 8, 7, 8, 4, 5],
-        id: 'sync',
-        highlightScope: { highlight: 'item', fade: 'global' },
-      },
-    ],
-    xAxis: [{ scaleType: 'band', data: ['Node', 'React', 'PHP', 'JavaScript', 'Sql', 'Mongo', 'Docker'] }],
-    yAxis: [{max: 10}],
-    height: 400,
-    slotProps: {
-      legend: {
-        hidden: true,
-      },
-    },
-  };
+      
+      series: [
+          {
+              data: [5, 4.5, 8, 7, 8, 4, 5],
+              id: 'sync',
+              highlightScope: { highlight: 'item', fade: 'global' },
+            },
+        ],
+        xAxis: [{ scaleType: 'band', data: ['Node', 'React', 'PHP', 'JavaScript', 'Sql', 'Mongo', 'Docker'] }],
+        yAxis: [{max: 10}],
+        height: 400,
+        slotProps: {
+            legend: {
+                hidden: true,
+            },
+        },
+    };
+    // const icons = [node, express, react, mongodb, javascript, git, docker, php, mysql, tailwind, bootstrap, html, css, typescript, next, postman];
+     const icons = [node, express, react, mongodb, javascript, git, docker, php, mysql, bootstrap, html, css, postman];
   
   return (
     <>
@@ -147,21 +159,31 @@ const Skills = () => {
           spacing={4}
           sx={{ width: '100%' }}
         >
-          <Stack direction="row" spacing={6}>
-            <img src={node} alt="node" width={70} />
-            <img src={react} alt="react" width={70} />
-            <img src={php} alt="php" width={70} />
-          </Stack>
-          <Stack direction="row" spacing={6}>
-            <img src={javascript} alt="javascript" width={70} />
-            <img src={mongodb} alt="mongodb" width={70} />
-            <img src={mysql} alt="mysql" width={70} />
-          </Stack>
-          <Stack direction="row" spacing={6}>
-            <img src={html} alt="html" width={70} />
-            <img src={bootstrap} alt="bootstrap" width={70} />
-            <img src={git} alt="git" width={70} />
-          </Stack>
+
+            <Stack
+                direction="row"
+                spacing={6}
+                flexWrap="wrap"
+                justifyContent="center"
+            >
+                {icons.map((img, i) => {
+                    const duration = 3 + Math.random();
+                    const delay = Math.random() * 2;
+
+                    return (
+                    <img
+                        key={i}
+                        src={img}
+                        alt="tech"
+                        className="float"
+                        style={{
+                        margin: "10px",
+                        animation: `float ${duration}s ease-in-out ${delay}s infinite`
+                        }}
+                    />
+                    );
+                })}
+            </Stack>
         </Stack>
         <Stack
           direction="column"
