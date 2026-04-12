@@ -229,7 +229,55 @@ const Skills = () => {
 
 const Progress = () => {
 
-    const [chartData, setChartData] = useState([]);
+    const staticData = [
+        {
+            "id": "progress",
+            "data": [
+                {
+                    "x": "2021-H2",
+                    "y": 0
+                },
+                {
+                    "x": "2022-H1",
+                    "y": 0
+                },
+                {
+                    "x": "2022-H2",
+                    "y": 0
+                },
+                {
+                    "x": "2023-H1",
+                    "y": 4
+                },
+                {
+                    "x": "2023-H2",
+                    "y": 37
+                },
+                {
+                    "x": "2024-H1",
+                    "y": 21
+                },
+                {
+                    "x": "2024-H2",
+                    "y": 32
+                },
+                {
+                    "x": "2025-H1",
+                    "y": 10
+                },
+                {
+                    "x": "2025-H2",
+                    "y": 21
+                },
+                {
+                    "x": "2026-H1",
+                    "y": 10
+                }
+            ]
+        }
+    ];
+
+    const [chartData, setChartData] = useState(staticData);
     const theme = useTheme();
 
     useEffect(() => {
