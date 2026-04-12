@@ -1,18 +1,21 @@
 import { createTheme } from '@mui/material/styles';
 
+// const primaryTheme = "#7952B3";
+const primaryTheme = "#257943";
+
 const getTheme = (mode = 'light') =>
   createTheme({
     palette: {
       mode,
       ...(mode === 'light'
         ? {
-            // 🌞 Light mode palette
+            // Light mode palette
             primary: {
-              main: '#257943', // brand green
+              main: primaryTheme, // brand green
               contrastText: '#ffffff',
             },
             secondary: {
-              main: '#257943', // slightly lighter green for accents
+              main: primaryTheme, // slightly lighter green for accents
               contrastText: '#ffffff',
             },
             background: {
@@ -25,13 +28,13 @@ const getTheme = (mode = 'light') =>
             },
           }
         : {
-            // 🌙 Dark mode palette
+            // Dark mode palette
             primary: {
-              main: '#257943', // slightly brighter green for dark bg
+              main: primaryTheme, // slightly brighter green for dark bg
               contrastText: '#ffffff',
             },
             secondary: {
-              main: '#257943', // pastel green accent
+              main: primaryTheme, // pastel green accent
               contrastText: '#1d1d1d',
             },
             background: {
