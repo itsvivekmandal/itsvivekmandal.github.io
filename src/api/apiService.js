@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// const API_BASE_URL = 'https://127.0.0.1:8080';
+// const API_BASE_URL = 'http://127.0.0.1:8080';
 const API_BASE_URL = 'https://api.vivekmandal.in';
 
 const apiService = {
@@ -16,12 +16,11 @@ const apiService = {
   },
   portfolioInfo: async() => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/portfolio_info`);
-      // console.log(response.data.progressInfo);
-      return response;
+        const response = await axios.get(`${API_BASE_URL}/progress`);
+        return response;
     } catch (error) {
-      // console.error("Error posting data", error);
-      return false;
+        console.error("Error posting data", error);
+        return false;
     }
   }
 

@@ -1,15 +1,21 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Grid, Typography, Button, Link, Stack, Divider } from "@mui/material";
 import CountUp from "react-countup";
 import Avatar from "@mui/material/Avatar";
+import { BarChart } from '@mui/x-charts/BarChart';
+import apiService from "../api/apiService";
+import {LineChart} from "@mui/x-charts/LineChart";
+import Heading from "./Heading";
+import { ResponsiveLine } from '@nivo/line';
+// import resume
+import resume from "../assets/resume/resume.pdf";
+// import icons
 import profile from "../assets/images/profile.jpg";
 import github from "../assets/images/github.png";
 import linkedin from "../assets/images/linkedin.png";
 import leetcode from "../assets/images/leetcode.png";
 import stackoverflow from "../assets/images/stack.png";
 import mail from "../assets/images/mail.png";
-import resume from "../assets/resume/resume.pdf";
-import { BarChart } from '@mui/x-charts/BarChart';
 import node from "../assets/images/node.png";
 import javascript from "../assets/images/javascript.png";
 import php from "../assets/images/php.png";
@@ -19,18 +25,14 @@ import docker from "../assets/images/docker.png";
 import mysql from "../assets/images/mysql.png";
 import react from "../assets/images/react.png";
 import git from "../assets/images/git.png";
-import laravel from "../assets/images/laravel.png";
 import css from "../assets/images/css.png";
-import tailwind from "../assets/images/tailwind.png";
-import next from "../assets/images/next.png";
-import typescript from "../assets/images/typescript.png";
 import express from "../assets/images/express.png";
 import postman from "../assets/images/postman.png";
-
+import laravel from "../assets/images/laravel.png";
 import bootstrap from "../assets/images/bootstrap.png";
-import {LineChart} from "@mui/x-charts/LineChart";
-import Heading from "./Heading";
-import apiService from "../api/apiService";
+// import typescript from "../assets/images/typescript.png";
+// import tailwind from "../assets/images/tailwind.png";
+// import next from "../assets/images/next.png";
 
 const AboutMe = ({downloadResume}) => {
   return (
@@ -126,10 +128,10 @@ const Skills = () => {
   const barChartsProps = {
       
       series: [
-          {
-              data: [5, 4.5, 8, 7, 8, 4, 5],
-              id: 'sync',
-              highlightScope: { highlight: 'item', fade: 'global' },
+            {
+                data: [5, 4.5, 8, 7, 8, 4, 5],
+                id: 'sync',
+                highlightScope: { highlight: 'item', fade: 'global' },
             },
         ],
         xAxis: [{ scaleType: 'band', data: ['Node', 'React', 'PHP', 'JavaScript', 'Sql', 'Mongo', 'Docker'] }],
@@ -142,7 +144,7 @@ const Skills = () => {
         },
     };
     // const icons = [node, express, react, mongodb, javascript, git, docker, php, mysql, tailwind, bootstrap, html, css, typescript, next, postman];
-     const icons = [node, express, react, mongodb, javascript, git, docker, php, mysql, bootstrap, html, css, postman];
+     const icons = [node, express, react, mongodb, javascript, git, docker, php, laravel, mysql, bootstrap, html, css, postman];
   
   return (
     <>
@@ -204,43 +206,73 @@ const Skills = () => {
 
 const Progress = () => {
 
-  const [chartData, setChartData] = useState(null);
+    const [chartData, setChartData] = useState([]);
 
-  useEffect(() => {
-    const getData = async () => {
-      const result = await apiService.portfolioInfo();
-      if (result) {
-        setChartData(result.data.progressInfo);
-      }
-    };
-    getData();
-  }, []);
-  
-  return (
-    <>
-    {
-      chartData ? (
-        <Grid container direction="column"  justifyContent="center" alignItems="center">
-          <Grid><Heading name="Life Time Progress" /></Grid>
-          <Grid sx={{width: { xs: "100%", md: "80%" }}}>
-            <LineChart
-              xAxis={[{scaleType: 'band', data: chartData.xAxis }]}
-              series={[
-                {
-                  data: chartData.series,
-                  area: true
-                },
-              ]}
-              height="300"
-            />
-          </Grid>
+    useEffect(() => {
+        const getData = async () => {
+            const result = await apiService.portfolioInfo();
+
+            if (result) {
+                setChartData(result?.data?.progressInfo);
+            }
+        };
+
+        getData();
+
+    }, []);
+
+    return (
+        <Grid container direction="column" alignItems="center">
+        <Grid>
+            <Heading name="Life Time Progress" />
         </Grid>
-      ):(
-        <div>Loading...</div>
-      )
-    }
-    </>
-  );
+
+        <Grid sx={{ width: { xs: "100%", md: "80%" }, aspectRatio: "4 / 1" }}>
+            <ResponsiveLine
+                data={chartData}
+
+                // Smooth curve (trading feel)
+                curve="monotoneX"
+
+                // Remove axes
+                axisTop={null}
+                axisRight={null}
+                axisBottom={null}
+                axisLeft={null}
+
+                // Remove grid
+                enableGridX={false}
+                enableGridY={false}
+
+                // Points off (clean line)
+                enablePoints={false}
+
+                // Tooltip (on hover)
+                useMesh={true}
+
+                tooltip={({ point }) => (
+                    <div style={{
+                        background: "#111",
+                        padding: "8px 12px",
+                        borderRadius: "6px",
+                        color: "#fff",
+                        fontSize: "12px"
+                    }}>
+                    📅 {point.data.x}<br />
+                    ⚡ {point.data.y} commits
+                    </div>
+                )}
+
+                colors={["#7952B3"]}
+
+                lineWidth={3}
+
+                enableArea={true}
+                areaOpacity={0.2}
+            />
+        </Grid>
+        </Grid>
+    );
 };
 
 const AnimatedCounter = () => {
@@ -282,6 +314,7 @@ const About = () => {
       <AboutMe downloadResume={downloadResume} />
       <Skills/>
       <Progress />
+      {/* <ProgressNew /> */}
       <Divider />
       <AnimatedCounter />
     </>
