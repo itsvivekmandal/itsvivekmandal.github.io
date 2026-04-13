@@ -11,7 +11,7 @@ const projectList = [
         "stack": ["Next Js", "Tailwind CSS"]
     },
     {
-        "name": "Online Food Ordering System",
+        "name": "Food Ordering System",
         "description": "This project is a food ordering system with various features.",
         "link": "https://www.linkedin.com/in/itsvivekmandal",
         "stack": ["Node Js", "React JS", "Tailwind CSS"]
@@ -47,73 +47,6 @@ const projectList = [
         "stack": ["React JS", "OpenWeather API"]
     }
 ];
-
-// const ProjectsPaper = ({ project }) => {
-//   const { name, link, description, stack } = project;
-//   return (
-//     <Grid item xs={12} sm={6} md={3}>
-//         <Paper elevation={8}
-//           sx={{
-//                 p: 3,
-//                 // flex: 2, // 🔥 ensures it stretches to equal height
-//                 height: { xs: 300, sm: 300, md: 320 },
-//                 display: 'flex',
-//                 textAlign: 'left',
-//                 flexDirection: 'column',
-//                 justifyContent: 'space-between', // keeps button at bottom
-//                 transition: 'box-shadow 0.4s ease, transform 0.3s ease',
-//                 '&:hover': {
-//                     boxShadow: '0px 12px 24px rgba(0, 0, 0, 0.5)',
-//                     transform: 'translateY(-8px)',
-//                 },
-//             }}
-//         >
-//             <Stack spacing={2}>
-//                 {/* Title */}
-//                 <Typography variant="h6" fontWeight="bold">
-//                 {name}
-//                 </Typography>
-
-//                 {/* Description */}
-//                 <Typography variant="body1" color="text.primary">
-//                 {description}
-//                 </Typography>
-
-//                 {/* Stack Used */}
-//                 <Box>
-//                 <Typography variant="body1" fontWeight="bold" mb={1}>
-//                     Stack Used:
-//                 </Typography>
-//                 <Stack direction="row" flexWrap="wrap" gap={1}>
-//                     {stack.map((tech, index) => (
-//                     <Chip
-//                         key={index}
-//                         label={tech}
-//                         size="small"
-//                         sx={{
-//                             fontSize: '0.9rem',
-//                             fontWeight: 500,
-//                         }}
-//                     />
-//                     ))}
-//                 </Stack>
-//                 </Box>
-
-//                 {/* View Button */}
-//                 <Button
-//                 variant="contained"
-//                 color="primary"
-//                 href={link}
-//                 target="_blank"
-//                 sx={{ alignSelf: 'flex-start', textTransform: 'none' }}
-//                 >
-//                 View
-//                 </Button>
-//             </Stack>
-//         </Paper>
-//     </Grid>
-//   );
-// };
 
 const ProjectsPaper = ({ project }) => {
   const { name, link, description, stack } = project;
