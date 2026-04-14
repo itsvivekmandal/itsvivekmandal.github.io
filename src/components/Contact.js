@@ -33,10 +33,10 @@ const Contact = () => {
         
         try {      
             // Generate the token
-            const token = await executeRecaptcha('contact_form');
+            const token = await executeRecaptcha('contact_me');
             const templateParams = {
                 message: message,
-                recaptchaToken: token, // Send this to your backend for verification
+                recaptchaToken: token // Send this to your backend for verification
             };
             
             const result = await apiService.sendMail(templateParams);
